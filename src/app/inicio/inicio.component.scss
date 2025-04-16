@@ -255,7 +255,6 @@
 
 h2.centered-text {
   line-height: 1.1;
-  display: block;
   position: relative;
   margin-bottom: 10px;
   z-index: 1;
@@ -264,14 +263,279 @@ h2.centered-text {
   text-align: center;
   font-size: 1.5em;
   margin-top: 45px;
+
+}
+.centered-text {
+  text-align: center;
 }
 
-h2 .hashtag {
-  font-size: 0.8em; /* Tamaño más pequeño para el hashtag */
-  color: #66bbce; /* Color del hashtag */
-  font-weight: 400; /* Peso de fuente más ligero */
-  margin-bottom: 20px; /* Espacio abajo */
+.hashtag {
+  display: block;         /* Para que pueda centrarse y ocupar su propia línea */
+  text-align: center;
+  font-size: 1.5rem;       /* Ajusta el tamaño aquí si lo quieres más grande */
+  margin-top: 20px;        /* Espacio arriba */
+  font-weight: 400;       /* Opcional: para que resalte más */
+  color:  #66bbce;
 }
+.imagenes {
+  background-color: #f7f7f7;
+  margin-top: 9px;
+  padding-top: 5px;
+}
+
+
+/* Centrado del título */
+.centered-text {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo del hashtag */
+.hashtag {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 400;
+
+}
+
+/* Grid para las imágenes: 3 columnas (dos filas al tener 6 imágenes) */
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;              /* Aumentamos el espacio entre imágenes */
+  margin-top: 20px;       /* Margen superior para separar de los textos */
+}
+
+/* Reducir el tamaño de las imágenes y centrarlas en su celda */
+.images-container img {
+  width: 100%;             /* Ajusta el porcentaje para que sean más pequeñas */
+  height: auto;
+  display: block;
+  margin: 30px 0;
+  padding: 0 15px;      /* Centra la imagen dentro de la celda */
+}
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+/* Lado izquierdo: formulario con fondo */
+.contact-left {
+  flex: 1;
+  background-image: url('/assets/formulario.webp');;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px;
+  color: white;
+}
+
+.form-overlay {
+  padding: 13px;
+  border-radius: 8px;
+  width: 94%;
+  max-width: 614px;
+}
+
+.contact-left form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 300; /* Hacemos el texto más delgado */
+  font-size: 14px; /* Puedes ajustar el tamaño según lo necesites */
+}
+
+.contact-left form input,
+.contact-left form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Blanco transparente */
+  background-color: transparent;
+  border-radius: 0;
+  transition: border-bottom 0.3s ease;
+  font-size: 16px;
+  color: white; /* Texto blanco si tienes fondo oscuro */
+}
+
+.contact-left form input,
+.contact-left form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px; /* Antes: 24px */
+  padding: 4px 0; /* Antes: 8px 0 */
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border-radius: 0;
+  transition: border-bottom 0.3s ease;
+  font-size: 16px;
+  color: white;
+}
+
+
+/* Cuando hay texto, línea blanca sólida */
+.contact-left form input:not(:placeholder-shown),
+.contact-left form textarea:not(:placeholder-shown) {
+  border-bottom: 2px solid white;
+}
+
+/* Labels más finos */
+.contact-left form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 300;
+  font-size: 14px;
+  color: white; /* O ajusta según tu fondo */
+}
+
+
+/* Labels más finitos */
+.contact-left form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #fff;
+}
+
+
+.contact-left form button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background: #d3ad69;
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-left form button:hover {
+  background-color: black;
+}
+
+
+/* Lado derecho: info de contacto */
+.contact-right {
+  flex: 1;
+  background-color: #f2f2f2;
+  padding: 60px 40px;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.4;
+
+}
+
+.contact-right h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 22px;
+
+}
+.contact-right p {
+text-align: center;
+  font-size: 22px;
+  color:#595959;
+
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 41px;
+  margin-left: 5em;
+}
+
+.contact-item i {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.contact-item .title {
+  font-weight: bold;
+}
+
+.contact-item .text {
+  font-size: 14px;
+}
+.footer-image-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer-image {
+  width: 30%;
+  height: auto;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icon {
+  margin: 0 10px;
+  font-size: 2rem; /* Ajusta el tamaño del ícono */
+  color: #333; /* Ajusta el color si es necesario */
+  text-decoration: none;
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-link {
+  color: #333; /* Color del texto */
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline; /* Efecto hover */
+}
+
+
+
+
+.scroll-to-top {
+  position: absolute;
+  bottom: 20px;       /* Ajusta según dónde quieras ubicarlo */
+  right: 20px;
+  background-size: 35%;
+  background-position: center;
+  background-color: #22caca;  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Flecha en pseudo-elemento */
+.scroll-to-top::before {
+  content: "↑";             /* O una flecha SVG como background-image */
+  display: block;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;        /* Centra verticalmente el símbolo */
+}
+
+/* Efecto hover */
+.scroll-to-top:hover {
+  background-color: #d6ba70;
+}
+
+
+
+
 
 
 
