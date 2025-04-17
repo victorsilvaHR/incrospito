@@ -78,7 +78,6 @@
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -503,35 +502,41 @@ text-align: center;
   text-decoration: underline; /* Efecto hover */
 }
 
-
-
-
 .scroll-to-top {
-  position: absolute;
-  bottom: 20px;       /* Ajusta según dónde quieras ubicarlo */
-  right: 20px;
-  background-size: 35%;
-  background-position: center;
-  background-color: #22caca;  border: none;
-  width: 50px;
-  height: 50px;
+  position: fixed;
+  bottom: 70px;
+  right: 15px;
+  width: 80px;
+  height: 100px;
+  background-color: #22caca;
+  border: none;
   cursor: pointer;
+  z-index: 10;
+  font-family: 'Arial', sans-serif; /* Fuente más delgada */
+
 }
 
 /* Flecha en pseudo-elemento */
 .scroll-to-top::before {
-  content: "↑";             /* O una flecha SVG como background-image */
+  content: "↑";
   display: block;
-  font-size: 24px;
+  font-size: 90px;           /* Tamaño de la flecha más grande */
   color: #fff;
   text-align: center;
-  line-height: 50px;        /* Centra verticalmente el símbolo */
+  line-height: 80px;
+  margin-bottom: 20%;
+
 }
 
-/* Efecto hover */
+/* Hover */
 .scroll-to-top:hover {
-  background-color: #d6ba70;
+  background-color: #44b9b9;
 }
+
+
+
+
+
 
 
 
