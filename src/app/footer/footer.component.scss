@@ -1,0 +1,37 @@
+.footer-image-container {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 65px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(0, 0, 0, .3);
+
+  }
+  
+  .footer-image {
+    width: 30%;
+    height: auto;
+  }
+  
+  .social-icons {
+    margin-top: 1rem;
+  }
+  
+  .social-icon {
+    margin: 0 10px;
+    font-size: 2rem; /* Ajusta el tamaño del ícono */
+    color: #333; /* Ajusta el color si es necesario */
+    text-decoration: none;
+  }
+  
+  .footer-links {
+    margin-top: 1rem;
+  }
+  
+  .footer-link {
+    color: #333; /* Color del texto */
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline; /* Efecto hover */
+  }

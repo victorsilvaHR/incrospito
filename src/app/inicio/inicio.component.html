@@ -1,28 +1,4 @@
-<div class="header-container">
-    <div class="left-icons">
-      <i class="fa fa-search"></i>
-    </div>
-  
-    <div class="logo-container">
-        <img src="assets/logo.webp" alt="Logo Serpiente" class="logo" style="width: 200px; height: auto;" />
-        <div class="titulo">
-       
-      </div>
-    </div>
-  
-    <div class="right-icons">
-      <i class="fa fa-user"></i>
-      <div class="cart-icon">
-      </div>
-    </div>
-  </div>
-  
-  <nav class="menu">
-    <a class="active" href="#">Inicio</a>
-    <a href="#">Quienes Somos</a>
-    <a href="#">Tienda</a>
-    <a href="#">Contacto</a>
-  </nav>
+
 
 <!-- Imagen grande superior -->
 <div class="top-image">
@@ -32,59 +8,21 @@
 <!-- Recuadro con 6 tarjetas de imágenes -->
 <div class="background-wrapper">
   <img src="assets/fondo.jpg" alt="Fondo" class="background-image" />
-<div class="image-gallery-container">
-  <div class="image-gallery">
 
-    <div class="card-info">
-    <a href="/cerrudo" class="card-image">
-      <img src="assets/cerrudo.jpg" alt="cerrudo" />
-    </a>
-      <span class="card-title">Cerrudo</span>
-      <span class="card-price">$1,600.00</span>
-    </div>
+  <div class="image-gallery-container">
+    <div class="image-gallery">
 
-    <div class="card-info">
-    <a href="/cuishe" class="card-image">
-      <img src="assets/cuishe.jpg" alt="cuishe" />
-    </a>
-      <span class="card-title">Cuishe</span>
-      <span class="card-price">$1,600.00</span>
-    </div>
-
-    <div class="card-info">
-    <a href="/espadin" class="card-image">
-      <img src="assets/espadin.jpg" alt="espadin" />
-    </a>
-      <span class="card-title">Espadín</span>
-      <span class="card-price">$790.00</span>
-    </div>
-
-    <div class="card-info">
-    <a href="/tepeztate" class="card-image">
-      <img src="assets/tepeztate.jpg" alt="tepeztate" />
-    </a>
-      <span class="card-title">Tepeztate</span>
-      <span class="card-price">$1,600.00</span>
-    </div>
-
-    <div class="card-info">
-    <a href="/tobala" class="card-image">
-      <img src="assets/tobala.jpg" alt="tobala" />
-    </a>
-      <span class="card-title">Tobala</span>
-      <span class="card-price">$1,600.00</span>
-    </div>
-
-    <div class="card-info">
-    <a href="/espadin-suavecito" class="card-image">
-      <img src="assets/espadin-suavecito.webp" alt="espadin suavesito" />
-    </a>
-      <span class="card-title">Espadín Suavecito</span>
-      <span class="card-price">$690.00</span>
+      <div *ngFor="let botella of botellas" class="card-info">
+        <a [href]="botella.url" class="card-image">
+          <img [src]="botella.image" [alt]="botella.name" />
+        </a>
+        <span class="card-title">{{ botella.name }}</span>
+        <span class="card-price">${{ botella.price }}</span>
+      </div>
     </div>
   </div>
 </div>
-</div>
+
 
 <!-- Botón centrado entre secciones -->
 <div class="middle-button-container">
@@ -161,35 +99,14 @@
       <div class="contact-item">
         <i class="fas fa-envelope"></i>
         <div class="title">Mail</div>
-        <div class="text">ventas&#64;iincrospito.com</div>
+        <div class="text">ventas&#64;incrospito.com</div>
       </div>
     </div>
   </div>
 </div>
-<!-- Footer -->
-<div class="footer-image-container">
-  <img src="assets/footer.svg" alt="Footer Incróspito" class="footer-image" />
-  
-  <div class="social-icons">
-    <a href="#" class="social-icon">
-      <i class="fab fa-facebook"></i>
-    </a>
-    <a href="#" class="social-icon">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-  
-  <div class="footer-links">
-    <a href="#" class="footer-link">Política de Privacidad</a> | 
-    <a href="#" class="footer-link">Términos y Condiciones</a>
-  </div>
-</div>
+<app-flecha-arriba></app-flecha-arriba>
 
 
-<!-- Botón de flecha hacia arriba -->
-<button class="scroll-to-top" (click)="scrollToTop()" *ngIf="showButton">
-  <span class="arrow-up"></span>
-</button>
 
 
 

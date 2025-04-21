@@ -1,0 +1,30 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 70px;
+    right: 15px;
+    width: 80px;
+    height: 100px;
+    background-color: #22caca;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    font-family: 'Arial', sans-serif; /* Fuente más delgada */
+  
+  }
+  
+  /* Flecha en pseudo-elemento */
+  .scroll-to-top::before {
+    content: "↑";
+    display: block;
+    font-size: 90px;           /* Tamaño de la flecha más grande */
+    color: #fff;
+    text-align: center;
+    line-height: 80px;
+    margin-bottom: 20%;
+  
+  }
+  
+  /* Hover */
+  .scroll-to-top:hover {
+    background-color: #44b9b9;
+  }
