@@ -1,0 +1,328 @@
+.background-image {
+    background-image: url('/assets/Incrospito5.webp');    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    content: '';
+    left: 0;
+    top: 0;
+    opacity: .74;
+  }
+  .header-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Que tome solo el tamaño del header */
+    background: #282268;
+    opacity: 0.74;
+    z-index: -1;
+  }
+    /* Texto principal */
+    .titulo-contacto {
+        font-size: 2.5rem;
+        font-weight: 700; /* Más gruesa */
+        margin: 0;
+        color: white;
+      }
+      
+      /* Texto secundario */
+      .subtitulo-contacto {
+        font-size: 1rem;
+        font-weight: 300; /* Más fina */
+        margin: 0;
+        color: white;
+      }
+
+ 
+  
+  
+  /* Tarjetas con fondo blanco */
+  .card-image {
+    background-color: #fff; /* Fondo blanco */
+    border: 2px solid #000;  /* Borde negro alrededor de cada tarjeta */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 180px;
+    transition: transform 0.3s ease;
+    display: block;
+    text-align: center;
+  }
+  
+  .card-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image img {
+    width: 90%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Contenedor para el nombre y precio fuera de la tarjeta, debajo de ella */
+  .card-info {
+    text-align: center;
+    padding: 10px 0;
+    width: 180px;
+    margin-top: 10px;
+  }
+  
+  
+  /* Título de la tarjeta (Nombre) */
+  .card-title {
+    display: block;
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold;
+    color: #333;
+    text-transform: capitalize;
+    margin-bottom: 5px; /* Espacio entre nombre y precio */
+  }
+  
+  /* Precio debajo del título */
+  .card-price {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .text-over-image {
+    position: relative;
+    width: 100%;
+  }
+  
+  .text-over-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Texto y botón encima de la imagen */
+  .overlay-text {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    max-width: 600px;
+    color: #000;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 1.5;
+    background: none;
+    // padding: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .overlay-text p {
+    margin-bottom: 15px;
+  }
+  .fondo-blanco-productos {
+    background-color: #fff;
+    padding: 40px 0;
+  }
+  /* Contenedor que envuelve el select y la galería */
+.select-gallery-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  /* Estilo del selector */
+  .custom-select {
+    position: relative;
+    width: 100%; /* ocupa todo el ancho del contenedor */
+    max-width: 300px; /* Opcional: controla el ancho del select */
+    margin-bottom: 30px;
+  }
+  
+  .select-button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 15px 10px;
+    font-size: 20px;
+    color: #444;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+    line-height: 1.5;
+  }
+  
+  /* Contenedor de la galería */
+  .image-gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+  
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Asegura que haya 4 columnas por fila */
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .first-row, .second-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en ambas filas */
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  
+  /* Tarjetas de imagen */
+  .card-image {
+    background-color: #fff; /* Fondo blanco */
+    border: 2px solid #000;  /* Borde negro alrededor de cada tarjeta */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 180px;
+    transition: transform 0.3s ease;
+    display: block;
+    text-align: center;
+  }
+  
+  .card-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Información debajo de la tarjeta */
+  .card-info {
+    text-align: center;
+    padding: 10px 0;
+    width: 180px;
+    margin-top: 10px;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+  }
+  
+  .card-price {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Opciones del selector */
+  .options {
+    margin-top: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .option-item {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .option-item input[type="radio"] {
+    margin-right: 8px;
+  }
+  
+  
+  .custom-select {
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .select-button {
+    width: 70%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 15px 10px;
+    font-size: 20px;
+    color: #444;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+    line-height: 1.5;
+  }
+  
+  .select-button:hover {
+    color: #000;
+  }
+  
+  .options {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .option-item {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .option-item input[type="radio"] {
+    margin-right: 8px;
+
+
+  }
+  
+  
+  .card-info {
+    text-align: center;
+  }
+  
+  .card-image img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .card-title {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .card-price {
+    color: #888;
+    font-size: 14px;
+  }
+  
+  
+  
+  

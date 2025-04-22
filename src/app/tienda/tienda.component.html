@@ -1,1 +1,65 @@
-<p>tienda works!</p>
+<div class="background-image"></div>
+<div class="overlay"></div>
+
+<div class="header-container">
+    <div class="header-texts">
+      <p class="titulo-contacto">PRODUCTOS</p>
+      <p class="subtitulo-contacto">Inicio / Productos</p>
+    </div>
+  </div>
+
+
+  
+
+
+  <div class="fondo-blanco-productos">
+    <div class="container">
+      
+      <div class="select-gallery-wrapper">
+        <!-- SELECTOR -->
+        <div class="custom-select">
+          <button class="select-button" (click)="showOptions = !showOptions">
+            SELECCIONAR <br> CONTENIDO
+          </button>
+          <div class="options" *ngIf="showOptions">
+            <label class="option-item">
+              <input type="radio" name="content" value="750" />
+              <span class="option-text">750</span>
+            </label>
+          </div>
+        </div>
+    
+        <!-- GALERÍA DE BOTELLAS -->
+        <div class="image-gallery-container">
+    
+          <!-- Primeras 4 botellas -->
+          <div class="image-gallery first-row">
+            <div *ngFor="let botella of botellas.slice(0, 4)" class="card-info">
+              <a [href]="botella.url" class="card-image">
+                <img [src]="botella.image" [alt]="botella.name" />
+              </a>
+              <span class="card-title">{{ botella.name }}</span>
+              <span class="card-price">${{ botella.price }}</span>
+            </div>
+          </div>
+          
+          <!-- Botellas restantes -->
+          <div class="image-gallery second-row">
+            <div *ngFor="let botella of botellas.slice(4, 8)" class="card-info">
+              <a [href]="botella.url" class="card-image">
+                <img [src]="botella.image" [alt]="botella.name" />
+              </a>
+              <span class="card-title">{{ botella.name }}</span>
+              <span class="card-price">${{ botella.price }}</span>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+<app-flecha-arriba></app-flecha-arriba>

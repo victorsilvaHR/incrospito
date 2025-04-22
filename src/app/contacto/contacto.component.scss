@@ -89,9 +89,16 @@
   /* Contenedor blanco con fondo */
   .info-container {
     position: relative;
-    width: 100%;
     text-align: center;
   }
+  .fondo-blanco-ajustable {
+    background-color: white;
+    padding: 1rem; /* Puedes ajustar este padding según lo que necesites */
+    margin-top: 2rem; /* Para separarlo de lo que esté arriba */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Opcional: sombra para elevar visualmente */
+    width: 100%;
+  }
+  
   
   .fondo-img {
     width: 100%;
@@ -107,8 +114,9 @@
     padding: 3rem 2rem;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     flex-wrap: wrap;
+    
   }
   
   .card {
@@ -119,7 +127,10 @@
     transition: all 0.3s ease;
     cursor: pointer;
   }
-  
+  .card:hover,
+.card:active {
+  border-color: #44b9b9;
+}
   .card h4 {
     margin-top: 1rem;
     font-size: 1.1rem;
@@ -129,22 +140,28 @@
   .card p {
     font-size: 0.95rem;
     margin-top: 0.5rem;
+    font-size: 13px;
+    color: #a0a0a0;
   }
   
   .icon-wrapper {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin: 0 auto;
-    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    background-color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 25px;
+    position: relative;
   }
+ 
   
   .icono {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
     color: #22caca;
     transition: all 0.3s ease;
   }
@@ -153,21 +170,18 @@
   .card:hover .icon-wrapper,
   .card:active .icon-wrapper {
     background-color: #44b9b9;
+  
   }
   
   .card:hover .icono,
   .card:active .icono {
     color: white;
   }
-  .footer-image-container {
-    text-align: center;
-    margin-top: 1rem;
-  }
-  
-  .footer-image {
-    width: 30%;
-    height: auto;
-  }
+  .card:hover h4,
+.card:active h4 {
+  color: #44b9b9;
+}
+
   
   .social-icons {
     margin-top: 1rem;
@@ -179,19 +193,11 @@
     color: #333; /* Ajusta el color si es necesario */
     text-decoration: none;
   }
-  
-  .footer-links {
-    margin-top: 1rem;
+  .icono.rotar {
+    transform: rotate(260deg);
   }
   
-  .footer-link {
-    color: #333; /* Color del texto */
-    text-decoration: none;
-  }
-  
-  .footer-link:hover {
-    text-decoration: underline; /* Efecto hover */
-  }
+ 
 
   /* FORMULARIO DENTRO DE LA IMAGEN DE FONDO */
 .formulario-container {
@@ -249,3 +255,4 @@
   margin-top: -44rem;
   text-align: center;
 }
+

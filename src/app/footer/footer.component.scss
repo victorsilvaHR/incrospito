@@ -1,37 +1,57 @@
 .footer-image-container {
-    text-align: center;
-    margin-top: 1rem;
-    padding-top: 65px;
-    margin-top: 50px;
-    border-top: 1px solid rgba(0, 0, 0, .3);
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 65px;
+  margin-top: 50px;
+  border-top: 1px solid rgba(0, 0, 0, .3);
+  margin-bottom: 2rem; /* margen abajo */
+}
 
-  }
+.footer-image {
+  width: 28%;
+  height: auto;
+}
+
+.social-icons {
+  margin-top: 1rem;
+
+}
+
+.social-icon {
+  margin:  100px; /* separación mayor entre íconos */
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
   
-  .footer-image {
-    width: 30%;
-    height: auto;
-  }
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column; /* textos uno debajo del otro */
+  gap: 0.5rem; /* espacio entre enlaces */
+  align-items: center;
+}
+
+.footer-link {
+  color: #333;
+  text-decoration: none;
   
-  .social-icons {
-    margin-top: 1rem;
-  }
-  
-  .social-icon {
-    margin: 0 10px;
-    font-size: 2rem; /* Ajusta el tamaño del ícono */
-    color: #333; /* Ajusta el color si es necesario */
-    text-decoration: none;
-  }
-  
-  .footer-links {
-    margin-top: 1rem;
-  }
-  
-  .footer-link {
-    color: #333; /* Color del texto */
-    text-decoration: none;
-  }
-  
-  .footer-link:hover {
-    text-decoration: underline; /* Efecto hover */
-  }
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Línea negra abajo */
+.footer-line {
+  border: none;
+  height: 2px;
+  background-color: black;
+  margin-top: 2rem;
+}
+.social-icon i {
+  color: #000;
+  font-size: 1.2rem;
+}
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { botellas } from '../utils/botellas';
 
 @Component({
   selector: 'app-tienda',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tienda.component.scss']
 })
 export class TiendaComponent implements OnInit {
+  botellas = botellas;    
+  showOptions = false;
+       
 
   constructor() { }
 
