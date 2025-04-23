@@ -234,25 +234,11 @@
     letter-spacing: 1px;
   }
   
-  /* Opciones del selector */
-  .options {
-    margin-top: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .option-item {
-    display: flex;
-    align-items: center;
-    color: #666;
-    font-size: 14px;
-  }
+
   
   .option-item input[type="radio"] {
     margin-right: 8px;
+    color: #444;
   }
   
   
@@ -280,24 +266,11 @@
     color: #000;
   }
   
-  .options {
-    margin-top: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .option-item {
-    display: flex;
-    align-items: center;
-    color: #666;
-    font-size: 14px;
-  }
+
+
   
   .option-item input[type="radio"] {
     margin-right: 8px;
-
-
   }
   
   

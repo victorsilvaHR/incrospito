@@ -10,6 +10,8 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FlechaArribaComponent } from './flecha-arriba/flecha-arriba.component';
+import { TerminosComponent } from './terminos/terminos.component';
+import { PoliticaComponent } from './politica/politica.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FlechaArribaComponent } from './flecha-arriba/flecha-arriba.component';
     ContactoComponent,
     HeaderComponent,
     FooterComponent,
-    FlechaArribaComponent
+    FlechaArribaComponent,
+    TerminosComponent,
+    PoliticaComponent
   ],
   imports: [
     BrowserModule,

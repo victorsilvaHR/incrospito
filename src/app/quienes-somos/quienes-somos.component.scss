@@ -1,0 +1,293 @@
+.background-image {
+    background-image: url('/assets/Incrospito5.webp');    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    content: '';
+    left: 0;
+    top: 0;
+    opacity: .74;
+  }
+  .header-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Que tome solo el tamaño del header */
+    background: #282268;
+    opacity: 0.74;
+    z-index: -1;
+  }
+    /* Texto principal */
+    .titulo-contacto {
+        font-size: 2.5rem;
+        font-weight: 700; /* Más gruesa */
+        margin: 0;
+        color: white;
+      }
+      
+      /* Texto secundario */
+      .subtitulo-contacto {
+        font-size: 1rem;
+        font-weight: 300; /* Más fina */
+        margin: 0;
+        color: white;
+      }
+      .fondo-blanco-productos {
+        background-color: #fff;
+        padding: 40px 0;
+      }
+      .quienes{
+     color: #e47979;
+     font-size: 40px;
+     font-family: 'Work Sans', sans-serif;
+
+    }
+    .seccion-gastronomia {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 80px; /* esto equivale aprox. a 8 cm en muchas pantallas */
+        flex-wrap: wrap;
+      }
+      
+      .texto-gastronomia {
+        flex: 1;
+        min-width: 300px;
+      }
+      
+      .imagen-gastronomia {
+        flex: 1;
+        min-width: 300px;
+      }
+      
+      .imagen-gastronomia img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px; /* opcional para darle estilo */
+      }
+
+      .ventana-historia {
+        background-image: url('/assets/Incrospito5.webp');    background-size: cover;
+        color: #ffffff;
+        position: relative;
+        padding: 60px 20px;
+        z-index: 1;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      
+      .ventana-historia::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.8;
+        z-index: -1;
+      }
+      
+      .ventana-historia .main-title h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #ffffff;
+        width: 100vw; /* Usa el 100% del ancho del viewport */
+
+      }
+    
+      
+      
+      .grid__uniform {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .grid__item {
+        flex: 1;
+        min-width: 300px;
+      }
+      
+      .left-section p {
+        text-align: justify;
+        margin-bottom: 16px;
+      }
+      .seccion-mision {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 60px 20px;
+        position: relative;
+        flex-wrap: wrap;
+      }
+      
+      .imagen-mision img {
+        max-width: 80%;
+        height: auto;
+        // margin-right: 20px;
+        margin-left: -26%;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Tarjeta de Misión */
+      .tarjeta-mision {
+        background-color: #ffffff;
+        padding: 30px;
+        box-shadow: 10px 10px 20px rgba(222, 222, 222, 1);
+        max-width: 500px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        position: relative;
+        z-index: 1;
+        margin-left: -29%;
+      }
+      
+      /* Hover efecto */
+      .tarjeta-mision:hover {
+        background-color: #22caca;
+        transition: background-color 0.3s ease;
+
+      }
+      
+      .mision-titulo {
+        font-size: 18px;
+        color: #000;
+        margin: 0;
+        text-align: justify;
+      }
+      
+      .mision-titulo strong {
+        font-weight: bold;
+      }
+      
+      .mision-texto {
+        font-weight: 200;
+        color: #333;
+        padding: 0%;
+      }
+      
+      .seccion-mision-reversa {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 60px 20px;
+        position: relative;
+        flex-wrap: wrap;
+      }
+      .seccion-vision {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 60px 20px;
+        position: relative;
+        flex-wrap: wrap;
+      }
+      
+      .tarjeta-vision {
+        background-color: #ffffff;
+        padding: 30px 40px; /* más padding en todas direcciones */
+        box-shadow: 10px 10px 20px rgba(222, 222, 222, 1);
+        max-width: 600px; /* más ancha */
+        position: relative;
+        z-index: 2;
+        margin-right: -100px; /* se empalma más hacia la imagen */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      
+      
+      .tarjeta-vision:hover {
+        background-color: #22caca;
+      }
+      
+      .imagen-vision {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .imagen-vision img {
+        max-width: 80%;
+        height: auto;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Estilos de texto */
+      .vision-titulo {
+        font-size: 18px;
+        color: #000;
+        margin: 0;
+        text-align: justify;
+      }
+      
+      .vision-titulo strong {
+        font-weight: bold;
+      }
+      
+      .vision-texto {
+        font-weight: 200;
+        color: #333;
+      }
+      .valores-completo {
+        font-size: 16px;
+        line-height: 1.3;
+        color: #333;
+        font-weight: 300;
+        text-align: start;
+        margin: 0;
+        padding: 9%;
+      }
+      
+      .valores-completo strong {
+        font-weight: bold;
+        margin-right: 4px;
+      }
+      
+      
+      
+      
+      
+      
+      
+      /* Responsive */
+      @media (max-width: 768px) {
+        .seccion-mision {
+          flex-direction: column;
+          gap: 20px;
+        }
+      
+        .imagen-mision img {
+          margin-right: 0;
+        }
+      }
+      
+      
+      /* Responsive */
+      @media (max-width: 768px) {
+        .seccion-gastronomia, .grid__uniform {
+          flex-direction: column;
+          gap: 30px;
+        }
+      }
+      
