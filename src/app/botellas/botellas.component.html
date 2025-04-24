@@ -1,0 +1,41 @@
+<div class="background-image"></div>
+<div class="overlay"></div>
+
+<div class="header-container" *ngIf="botella">
+    <div class="header-texts">
+      <p class="titulo">{{ botella.name }}</p>
+      <p class="subtitulo">Inicio / Mezcal Incrospito / {{ botella.name }}</p>
+    </div>
+  </div>
+  
+  <div class="detalle-botella" *ngIf="botella">
+    <div class="detalle-contenido">
+      <div class="detalle-img">
+        <img [src]="botella.image" [alt]="botella.name" />
+      </div>
+      <div class="detalle-texto">
+        <h2>{{ botella.name }}</h2>
+        <p class="desc">{{ botella.desc }}</p>
+        <p class="precio">$ {{ botella.price }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <h3 class="titulo-secundario">Productos Vistos Recientemente</h3>
+  
+  <div class="galeria-botellas">
+    <div *ngFor="let botella of botellasData" class="card-info">
+        <a [routerLink]="['/botella', botella.id]" class="card-image">
+        <img [src]="botella.image" [alt]="botella.name" />
+      </a>
+      <span class="card-title">{{ botella.name }}</span>
+      <span class="card-price">${{ botella.price }}</span>
+    </div>
+  </div>
+  
+  
+
+
+
+  
+  

@@ -13,15 +13,18 @@
     <div class="image-gallery">
 
       <div *ngFor="let botella of botellas" class="card-info">
-        <a [href]="botella.url" class="card-image">
+        <!-- Aquí es donde ajustamos el enlace para que use el router -->
+        <a [routerLink]="['/botella', botella.id]" class="card-image">
           <img [src]="botella.image" [alt]="botella.name" />
         </a>
         <span class="card-title">{{ botella.name }}</span>
         <span class="card-price">${{ botella.price }}</span>
       </div>
+
     </div>
   </div>
 </div>
+
 
 
 <!-- Botón centrado entre secciones -->
@@ -74,7 +77,7 @@
   </div>
 
   <!-- Derecha: información de contacto -->
-  <div class="contact-right">
+  <div class="contact-right border-title" data-aos="fade-right" data-aos-duration="1000">
     <h3>Contáctanos</h3>
     <p>
       Estamos para servirte. Por favor déjanos tus datos y en breve nos pondremos en contacto contigo
@@ -82,29 +85,48 @@
 
     <div class="contact-grid">
       <div class="contact-item">
-        <i class="fab fa-instagram"></i>
-        <div class="title">Instagram</div>
-        <div class="text">&#64;iincrospito_mezcal</div>
+        <div class="icon-title">
+          <i class="fab fa-instagram"></i>
+          <div class="text-block">
+            <div class="title">Instagram</div>
+            <div class="text">&#64;incrospito_mezcal</div>
+          </div>
+        </div>
       </div>
+      
       <div class="contact-item">
-        <i class="fab fa-facebook"></i>
-        <div class="title">Facebook</div>
-        <div class="text">Incróspito Mezcal</div>
+        <div class="icon-title">
+          <i class="fab fa-facebook-square"></i>
+          <div class="text-block">
+            <div class="title">Facebook</div>
+            <div class="text">Incróspito Mezcal</div>
+          </div>
+        </div>
       </div>
+      
       <div class="contact-item">
-        <i class="fas fa-phone-alt"></i>
-        <div class="title">Teléfono</div>
-        <div class="text">55 2662 3930</div>
+        <div class="icon-title">
+          <i class="fas fa-phone-alt"></i>
+          <div class="text-block">
+            <div class="title">Teléfono</div>
+            <div class="text">55 2662 3930</div>
+          </div>
+        </div>
       </div>
+      
       <div class="contact-item">
-        <i class="fas fa-envelope"></i>
-        <div class="title">Mail</div>
-        <div class="text">ventas&#64;incrospito.com</div>
+        <div class="icon-title">
+          <i class="fas fa-envelope"></i>
+          <div class="text-block">
+            <div class="title">Mail</div>
+            <div class="text">ventas&#64;incrospito.com</div>
+          </div>
+        </div>
       </div>
-    </div>
   </div>
 </div>
-<app-flecha-arriba></app-flecha-arriba>
+    
+    
 
 
 

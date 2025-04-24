@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FlechaArribaComponent } from './flecha-arriba/flecha-arriba.component';
 import { TerminosComponent } from './terminos/terminos.component';
 import { PoliticaComponent } from './politica/politica.component';
+import { BotellasComponent } from './botellas/botellas.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PoliticaComponent } from './politica/politica.component';
     FooterComponent,
     FlechaArribaComponent,
     TerminosComponent,
-    PoliticaComponent
+    PoliticaComponent,
+    BotellasComponent
   ],
   imports: [
     BrowserModule,

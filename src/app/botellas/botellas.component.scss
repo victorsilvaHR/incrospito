@@ -1,0 +1,144 @@
+.background-image {
+    background-image: url('/assets/Incrospito5.webp');    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 60%;
+    background-size: 205%; /* Aumenta del 100% al 120% */
+    position: absolute;
+    width: 100%;
+    height: 54%;
+    z-index: -2;
+    content: '';
+    left: 0;
+    top: 0;
+    opacity: .74;
+  }
+  
+  /* Capa transparente morada encima del fondo */
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: -20px;    left: 0;
+    width: 100%;
+    height: 57%; /* Que tome solo el tamaño del header */
+    background: #282268;
+    opacity: 0.74;
+    z-index: -1;
+  }
+  
+  /* Texto principal */
+  .titulo {
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 2.25em;
+
+  }
+  
+  /* Texto secundario */
+  .subtitulo {
+    font-size: 1rem;
+    font-weight: 300; /* Más fina */
+    margin: 0;
+    color: white;
+  }
+  .detalle-botella {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #fff;
+  }
+  
+  .detalle-contenido {
+    display: flex;
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+    align-items: flex-start;
+  }
+  
+  .detalle-img img {
+    max-width: 300px;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  .detalle-texto {
+    flex: 1;
+    padding-top: 20px;
+  }
+  
+  .detalle-texto h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .detalle-texto .desc {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .detalle-texto .precio {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a148c;
+  }
+  
+  .titulo-secundario {
+    text-align: center;
+    font-size: 20px;
+    margin: 40px 0 20px;
+  }
+  
+  .galeria-botellas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+  
+  .card-info {
+    width: 180px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+  }
+  
+  .card-image img {
+    width: 200px;  /* Ajusta este valor según lo grande que lo necesites */
+    height: auto;
+    object-fit: cover;
+  }
+  
+  
+  .card-title {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .card-price {
+    color: #4a148c;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  

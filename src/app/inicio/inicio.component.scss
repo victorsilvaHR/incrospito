@@ -344,46 +344,66 @@ h2.centered-text {
   text-align: center;
   font-size: 20px;
   line-height: 1.4;
-
 }
 
 
 .contact-right h3 {
-  font-size: 24px;
   margin-bottom: 16px;
   text-align: center;
   font-size: 22px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
 
 }
 .contact-right p {
-text-align: center;
-  font-size: 22px;
-  color:#595959;
+  color: #595959;
+  font-family: Work Sans;
+  font-weight: 600;
+  letter-spacing: 0em;
+  margin: 0 0 15px;
+  line-height: 1.4;
 
 }
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-top: 41px;
-  margin-left: 5em;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+
 }
 
-.contact-item i {
+.contact-item {
+  padding: 10px;
+}
+
+.icon-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.icon-title i {
   font-size: 24px;
-  margin-right: 15px; /* separa el icono del texto */
   color: #282268;
-  min-width: 30px;
-  text-align: center;
+  margin-top: 3px;
 }
 
-.contact-item .title {
+.text-block .title {
   font-weight: bold;
+  font-size: 16px;
+  text-align: start;
+
 }
 
-.contact-item .text {
+.text-block .text {
   font-size: 14px;
+  margin-top: 2px;
+
 }
+.contact-right {
+  overflow: hidden;
+}
+
 
 
 
