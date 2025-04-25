@@ -1,32 +1,79 @@
-.scroll-to-top {
+// .floating-rect {
+//   position: fixed;
+//   bottom: 70px;
+//   right: 15px;
+//   background-color: white;
+//   border-radius: 12px;
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   z-index: 1000;
+//   padding: 10px;
+//   gap: 10px;
+// }
+
+// .icon-button {
+//   background-color: #22caca;
+//   border: none;
+//   color: white;
+//   width: 45px;
+//   height: 45px;
+//   font-size: 20px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
+// }
+
+// .icon-button:hover {
+//   background-color: #1aa;
+// }
+
+// .top-btn {
+//   background-color: #22caca;
+// }
+
+// .whatsapp {
+//   background-color: #25d366;
+// }
+
+// .facebook {
+//   background-color: #3b5998;
+//   border-radius: 50%;
+// }
+
+// .instagram {
+//   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+//   border-radius: 12px;
+// }
+
+.vertical-social {
   position: fixed;
+  right: 10px;
   bottom: 70px;
-  right: 15px;
-  width: 70px;
-  height: 70px;
-  background-color: #22caca;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  font-family: 'Arial', sans-serif;
+  background: white;
+  padding: 10px 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 0;
+  z-index: 1000;
 }
 
-/* Quitamos la flecha CSS */
-.scroll-to-top::before {
-  content: none;
+.icon-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
 }
 
-/* Imagen dentro del botón */
-.arrow-image {
-  width: 35%;
-  height: auto;
-}
-
-/* Hover */
-.scroll-to-top:hover {
-  background-color: #44b9b9;
+.icon-block i {
+  font-size: 20px;
+  margin-bottom: 2px;
 }

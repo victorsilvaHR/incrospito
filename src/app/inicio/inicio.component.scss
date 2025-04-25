@@ -187,19 +187,24 @@ h2.centered-text {
   text-align: center;
   font-size: 1.5em;
   margin-top: 45px;
+  text-align: center;
+  font-family: Work Sans;
+  text-align: center;
+  padding: 0;
 
 }
-.centered-text {
-  text-align: center;
-}
+
 
 .hashtag {
-  display: block;         /* Para que pueda centrarse y ocupar su propia línea */
+  display: block;         
   text-align: center;
-  font-size: 1.5rem;       /* Ajusta el tamaño aquí si lo quieres más grande */
-  margin-top: 20px;        /* Espacio arriba */
+  font-size: 18px;   
+  font-weight: 400;
+  margin-top: 15px;        /* Espacio arriba */
   font-weight: 400;       /* Opcional: para que resalte más */
   color:  #66bbce;
+  font-family: Work Sans;
+
 }
 .imagenes {
   background-color: #f7f7f7;
@@ -207,28 +212,12 @@ h2.centered-text {
   padding-top: 5px;
 }
 
-
-/* Centrado del título */
-.centered-text {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-/* Estilo del hashtag */
-.hashtag {
-  text-align: center;
-  margin-top: 10px;
-  font-weight: 400;
-
-}
-
 /* Grid para las imágenes: 3 columnas (dos filas al tener 6 imágenes) */
 .images-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;              /* Aumentamos el espacio entre imágenes */
-  margin-top: 20px;       /* Margen superior para separar de los textos */
+  margin-top: 60px;       /* Margen superior para separar de los textos */
 }
 
 /* Reducir el tamaño de las imágenes y centrarlas en su celda */
@@ -407,21 +396,7 @@ h2.centered-text {
 
 
 
-.menu {
-  display: flex;
-  gap: 20px;
-  padding: 10px;
-}
-.menu a {
-  text-decoration: none;
-  color: #333;
-  padding: 5px 10px;
-  text-align: center;
-}
-.menu a.active {
-  color: #007bff;
-  border-radius: 5px;
-}
+
 
 
 

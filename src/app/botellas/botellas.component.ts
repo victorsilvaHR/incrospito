@@ -15,8 +15,9 @@ export class BotellasComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.botella = this.botellasData.find(b => b.id === id);
+    this.route.paramMap.subscribe(params => {
+      const id = Number(params.get('id'));
+      this.botella = this.botellasData.find(b => b.id === id);
+    });
   }
-
 }

@@ -1,4 +1,42 @@
-<!-- Botón de flecha hacia arriba -->
-<button class="scroll-to-top" (click)="scrollToTop()" *ngIf="showButton">
-  <img src="assets/arriba.png" alt="Subir" class="arrow-image">
-</button>
+<!-- <div class="floating-rect" *ngIf="showButton">
+  <button (click)="scrollToTop()" class="icon-button top-btn">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <a href="https://wa.me/1234567890" target="_blank" class="icon-button whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://facebook.com/tu_pagina" target="_blank" class="icon-button facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://instagram.com/tu_pagina" target="_blank" class="icon-button instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div> -->
+
+<!-- Botón vertical flotante minimalista -->
+<div class="vertical-social" *ngIf="showButton">
+  <!-- TOP -->
+  <div class="icon-block" (click)="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+    <span>TOP</span>
+  </div>
+
+  <!-- WhatsApp -->
+  <a class="icon-block" href="https://wa.me/1234567890" target="_blank">
+    <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+    <span>WA</span>
+  </a>
+
+  <!-- Facebook -->
+  <a class="icon-block" href="https://www.facebook.com/share/1FgGmto4dD/?mibextid=wwXIfr" target="_blank">
+    <i class="fab fa-facebook-f" style="color: #3b5998;"></i>
+    <span>Fb</span>
+  </a>
+
+  <!-- Instagram -->
+  <a class="icon-block" href="https://instagram.com/incrospito_mezcal" target="_blank">
+    <i class="fab fa-instagram" style="color: #E1306C;"></i>
+    <span>Ig</span>
+  </a>
+</div>
+
