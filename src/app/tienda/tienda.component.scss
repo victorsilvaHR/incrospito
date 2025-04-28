@@ -301,7 +301,78 @@
     color: #888;
     font-size: 14px;
   }
+  /* Estilos para móviles */
+@media (max-width: 768px) {
+  .background-image {
+    background-size: 215%; /* Aumentar el tamaño de la imagen */
+    background-position: center -190px; /* Asegurarse de que la parte superior de la imagen esté visible */
+  }
   
+  .overlay {
+    height: 60vh; /* Puedes ajustar la altura de la superposición en móviles */
+  }
+
+  .header-container {
+    padding: 40px 20px;
+  }
+
+  .titulo-contacto {
+    font-size: 1.5em;
+  }
+
+  .subtitulo-contacto {
+    font-size: 0.9rem;
+  }
+
+  .overlay-text {
+    top: 30%;
+    right: 5%;
+    font-size: 16px;
+    align-items: flex-end;
+  }
+
+  .select-gallery-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-select {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    gap: 15px;
+  }
+
+  .first-row, .second-row {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    gap: 15px;
+  }
+
+  .card-image {
+    width: 140px;
+  }
+
+  .card-info {
+    width: 140px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .card-price {
+    font-size: 12px;
+  }
+
+  .select-button {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
   
   
   

@@ -1,37 +1,24 @@
-
-
-<!-- Imagen grande superior -->
 <div class="top-image">
   <img src="assets/Incrospito-mexico.webp" alt="Incrospito México" />
 </div>
-
-<!-- Recuadro con 6 tarjetas de imágenes -->
 <div class="background-wrapper">
   <img src="assets/fondo.jpg" alt="Fondo" class="background-image" />
-
   <div class="image-gallery-container">
     <div class="image-gallery">
-
       <div *ngFor="let botella of botellas" class="card-info">
-        <!-- Aquí es donde ajustamos el enlace para que use el router -->
         <a [routerLink]="['/botella', botella.id]" class="card-image">
           <img [src]="botella.image" [alt]="botella.name" />
         </a>
         <span class="card-title">{{ botella.name }}</span>
         <span class="card-price">${{ botella.price }}</span>
       </div>
-
     </div>
   </div>
 </div>
 
-
-
-<!-- Botón centrado entre secciones -->
 <div class="middle-button-container">
   <a routerLink="/tienda" class="ver-tienda-btn">VER TIENDA</a>
 </div>
-
 <div class="text-over-image">
   <img src="assets/Mezcal-Incrospito_2000x.webp" alt="Incrospito México" />
   <div class="overlay-text">

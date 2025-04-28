@@ -250,6 +250,90 @@
   margin-bottom: 3rem;
   margin-top: -44rem;
   text-align: center;
-  margin-top: -130%;
+  margin-top: -150%;
 }
+@media screen and (max-width: 768px) {
+
+  .background-image {
+    background-size: 240%; /* Aumentar el tamaño de la imagen */
+    background-position: center -150px; /* Asegurarse de que la parte superior de la imagen esté visible */
+  }
+  
+  .overlay {
+    height: 60vh; /* Puedes ajustar la altura de la superposición en móviles */
+  }
+
+  .header-container {
+    padding: 33px 20px; /* Más espacio arriba y abajo */
+    text-align: center; /* Centrar contenido */
+  }
+
+  .titulo-contacto {
+    font-size: 2rem; /* Tamaño más visible */
+    margin-bottom: 1rem; /* Espacio abajo */
+  }
+
+  .subtitulo-contacto {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .logo {
+    width: 120px;
+    margin-top: 1rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 30px 20px;
+  }
+
+  .card {
+    width: 95%;
+    margin: 10px 0; /* Espaciado entre cada card */
+  }
+
+  .fondo-blanco-ajustable {
+    margin-top: 5rem; /* Separarlo bastante */
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .formulario-container {
+    width: 95%;
+    padding: 2rem 1rem;
+    margin: 1rem auto; /* Espacio arriba */
+  }
+
+  .titulo-formulario {
+    font-size: 1.8rem;
+    margin-top: 350px;
+    margin-bottom: 50px;
+  }
+
+  .formulario-container input,
+  .formulario-container textarea {
+    font-size: 1rem;
+    margin-bottom: 1rem; /* Separar inputs */
+  }
+
+  .btn-submit {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .left-icons, .right-icons {
+    margin-top: 1rem;
+  }
+
+  .social-icon {
+    font-size: 2rem;
+    margin: 0 10px;
+  }
+}
+
+
 
