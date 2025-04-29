@@ -13,6 +13,8 @@ import { FlechaArribaComponent } from './flecha-arriba/flecha-arriba.component';
 import { TerminosComponent } from './terminos/terminos.component';
 import { PoliticaComponent } from './politica/politica.component';
 import { BotellasComponent } from './botellas/botellas.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { BotellasComponent } from './botellas/botellas.component';
     FlechaArribaComponent,
     TerminosComponent,
     PoliticaComponent,
-    BotellasComponent
+    BotellasComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

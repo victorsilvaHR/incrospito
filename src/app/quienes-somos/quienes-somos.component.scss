@@ -21,7 +21,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 70px;
+  padding: 55px;
   color: white;
   text-align: center;
   z-index: 1;
@@ -286,7 +286,6 @@
   margin-right: 4px;
 }
 
-/* --- Media Queries para dispositivos móviles --- */
 
 /* En móviles, ajustar flexbox para que las imágenes se alineen verticalmente */
 @media (max-width: 768px) {

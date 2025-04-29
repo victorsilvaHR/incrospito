@@ -46,19 +46,19 @@
   <div class="contact-left">
     <div class="form-overlay">
       <form>
-        <label for="name">Nombre</label>
-        <input type="text" id="name" name="name" placeholder=" " />
+        <label for="name"></label>
+        <input type="text" id="name" name="name" placeholder="Nombre" />
 
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" placeholder=" " />
+        <label for="email"></label>
+        <input type="email" id="email" name="email" placeholder="Correo electrónico " />
 
-        <label for="subject">Asunto</label>
-        <input type="text" id="subject" name="subject" placeholder=" " />
+        <label for="subject"></label>
+        <input type="text" id="subject" name="subject" placeholder="Asunto" />
 
-        <label for="message">Mensaje</label>
-        <textarea id="message" name="message" placeholder=" "></textarea>
+        <label for="message"></label>
+        <textarea id="message" name="message" placeholder="Mensaje"></textarea>
 
-        <button type="submit" class="btn-submit">Enviar</button>
+        <button type="button" class="btn-submit" (click)="enviarFormulario()">Enviar</button>
       </form>
     </div>
   </div>
@@ -112,6 +112,22 @@
       </div>
   </div>
 </div>
+<!-- Modal -->
+<div class="edad-overlay" *ngIf="mostrarModal">
+  <div class="edad-modal">
+    <img src="assets/logo.webp" alt="Logo" class="edad-logo" />
+
+    <h2 class="edad-titulo">Verificación de edad</h2>
+    <p class="edad-texto">Debes tener 18 o más para acceder al sitio web.</p>
+
+    <div class="edad-botones">
+      <button class="btn-morado" (click)="confirmarEdad()">Soy mayor de 18</button>
+      <button class="btn-contorno" (click)="rechazarEdad()">Soy menor :(</button>
+    </div>
+  </div>
+</div>
+
+
 
     
     
