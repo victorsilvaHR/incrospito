@@ -15,17 +15,20 @@
 }
 
 .social-icons {
-  margin-top: 1rem;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: nowrap; /* <- Esto evita que se vayan abajo */
 }
 
+
 .social-icon {
-  margin:  100px; /* separación mayor entre íconos */
   font-size: 1.5rem;
   color: #333;
   text-decoration: none;
-  
 }
+
 
 .footer-links {
   margin-top: 1rem;
@@ -57,3 +60,13 @@
   font-size: 1.2rem;
 }
 
+@media (max-width: 768px) {
+  .social-icons {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .social-icon {
+    font-size: 1.8rem;
+  }
+}
