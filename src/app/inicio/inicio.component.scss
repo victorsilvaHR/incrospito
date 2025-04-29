@@ -390,16 +390,17 @@ h2.centered-text {
   overflow: hidden;
 }
 /* ---- Ajustes para vista móvil ---- */
+/* ---- Ajustes para vista móvil ---- */
 @media (max-width: 768px) {
-  
+
   .image-gallery {
-    grid-template-columns: repeat(2, 1fr); /* De 3 columnas pasamos a 2 en móvil */
-    gap: 20px 30px; /* Reducimos el espacio entre tarjetas */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
     padding: 40px 20px;
   }
 
   .card-image, .card-info {
-    width: 140px; /* Hacemos las tarjetas un poco más pequeñas en móvil */
+    width: 140px;
   }
 
   .overlay-text {
@@ -407,75 +408,27 @@ h2.centered-text {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.7); /* MÁS transparencia */
-    padding: 15px 20px;
-    border-radius: 15px;
-    font-size: 14px; /* MÁS pequeño */
-    text-align: center;
-    width: 80%; /* MÁS angosto */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra más suave */
-  }
-  
-  .overlay-text p {
-    margin-bottom: 12px; /* Separación del botón */
-  }
-  
-  .ver-mas-btn {
-    font-size: 14px; /* Botón más pequeño */
-    padding: 8px 25px;
-    border-radius: 20px;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    display: inline-block;
-    transition: background-color 0.3s;
-  }
-  
-  .ver-mas-btn:hover {
-    background-color: #333;
-  }
-  
-  .images-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
-    gap: 15px;
-    margin-top: 40px;
-  }
-
-  .images-container img {
-    margin: 10px 0;
-    padding: 0 5px;
-  }
-
-  .contact-section {
-    flex-direction: column; /* Formulario arriba y contacto abajo */
-  }
-
-  .contact-left, .contact-right {
-    width: 100%;
-    padding: 30px 20px;
-  }
-
-  .contact-left {
-    background-position: center;
-  }
-
-  .contact-right {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    color: #000;
     font-size: 16px;
-    padding: 30px 20px;
+    text-align: center;
+    align-items: center;
   }
 
-  .contact-right h3 {
-    font-size: 20px;
-  }
-
-  .contact-right p {
+  .ver-mas-btn {
     font-size: 14px;
+    padding: 8px 30px;
+  }
+
+  .middle-button-container {
+    margin: 20px 0;
   }
 
   .ver-tienda-btn {
     font-size: 1.2em;
-    height: 45px;
-    padding: 5px 25px;
+    padding: 8px 25px;
   }
 
   h2.centered-text {
@@ -487,7 +440,37 @@ h2.centered-text {
     font-size: 16px;
   }
 
+  .images-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .contact-section {
+    flex-direction: column;
+  }
+
+  .contact-left, .contact-right {
+    padding: 30px 20px;
+  }
+
+  .contact-left {
+    background-position: center;
+  }
+
+  .contact-right h3 {
+    font-size: 20px;
+  }
+
+  .contact-right p {
+    font-size: 16px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
+
 
 
 
