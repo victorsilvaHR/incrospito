@@ -284,7 +284,7 @@ h2.centered-text {
 }
 
 .contact-left form label {
-  display: none; /* Ocultamos las etiquetas si no las usas */
+  display: none; 
 }
 
 
@@ -299,6 +299,9 @@ h2.centered-text {
   border-radius: 40px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 15px;
+  font-weight: 200; 
+
 }
 
 .contact-left form button:hover {
@@ -355,7 +358,7 @@ h2.centered-text {
 
 .icon-title i {
   font-size: 24px;
-  color: #282268;
+  color: #000000;
   margin-top: 3px;
 }
 

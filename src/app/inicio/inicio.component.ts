@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { botellas } from '../utils/botellas';
 import * as AOS from 'aos';
 import { HttpClient } from '@angular/common/http';
+import { FormularioService } from '../services/formulario.service';
+
 
 @Component({
   selector: 'app-inicio',
@@ -19,18 +21,19 @@ export class InicioComponent implements OnInit {
 
   mostrarModal: boolean = false;
 
-
-
-constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private formularioService: FormularioService 
+  ) {}
 
   ngOnInit(): void {
     AOS.init({
-      duration: 1000, // duración por defecto de las animaciones
-      once: true,     // animar solo una vez al hacer scroll
+      duration: 1000,
+      once: true,
     });
     this.mostrarModal = true;
-
   }
+
   enviarFormulario() {
     const datosFormulario = {
       nombre: this.nombre,
@@ -38,25 +41,28 @@ constructor(private http: HttpClient) {}
       asunto: this.asunto,
       mensaje: this.mensaje
     };
-  
-    this.http.post('https://tuservidor.com/formulario.php', datosFormulario)
-      .subscribe(res => {
+
+    this.formularioService.guardarFormulario(datosFormulario).subscribe({
+      next: res => {
         console.log('Respuesta del servidor:', res);
-      }, err => {
+        alert('¡Formulario enviado correctamente!');
+      },
+      error: err => {
         console.error('Error al enviar:', err);
-      });
+        alert('Hubo un problema al enviar el formulario.');
+      }
+    });
   }
+
   cerrarModal() {
     this.mostrarModal = false;
   }
+
   confirmarEdad(): void {
     this.mostrarModal = false;
-    // sessionStorage.setItem('mayorEdad', 'true'); // si quieres recordar
   }
 
   rechazarEdad(): void {
     window.location.href = 'https://www.google.com';
   }
-  
-
 }

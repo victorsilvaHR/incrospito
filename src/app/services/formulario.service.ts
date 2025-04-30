@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class FormularioService {
 
-  // URL del archivo PHP donde guardarás la información
-  private apiUrl = 'https://tu-servidor.com/guardar_formulario.php';
+  // Define la URL como propiedad de la clase
+  private apiUrl = 'https://solu-tec.net/api/php/incrospitoMail.php';
 
   constructor(private http: HttpClient) { }
 

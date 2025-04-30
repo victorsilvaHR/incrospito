@@ -14,6 +14,8 @@ import { TerminosComponent } from './terminos/terminos.component';
 import { PoliticaComponent } from './politica/politica.component';
 import { BotellasComponent } from './botellas/botellas.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
