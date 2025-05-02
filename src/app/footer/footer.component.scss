@@ -10,7 +10,7 @@
 }
 
 .footer-image {
-  width: 28%;
+  width: 30%;
   height: auto;
 }
 
@@ -60,3 +60,8 @@
   font-size: 1.2rem;
 }
 
+@media (max-width: 768px) {
+  .footer-image {
+    width: 60%; /* Aumenta el tamaño en móviles */
+  }
+}

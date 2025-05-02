@@ -31,10 +31,10 @@
   .menu {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     padding: 8px 0;
     background-color: white;
-    margin-bottom: 1em;
+    margin-bottom: 0.5px;
 
   
   
@@ -74,11 +74,11 @@
   
   @media screen and (max-width: 480px) {
     .menu {
-      gap: 10px;
+      gap: 25px;
     }
   
     .menu a {
-      font-size: 11px;
+      font-size: 13px;
     }
   
     .header-container .logo {

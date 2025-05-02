@@ -19,7 +19,6 @@ export class InicioComponent implements OnInit {
   asunto: string = '';
   mensaje: string = '';
 
-  mostrarModal: boolean = false;
 
   constructor(
     private http: HttpClient,
@@ -31,7 +30,6 @@ export class InicioComponent implements OnInit {
       duration: 1000,
       once: true,
     });
-    this.mostrarModal = true;
   }
 
   enviarFormulario() {
@@ -45,7 +43,12 @@ export class InicioComponent implements OnInit {
     this.formularioService.guardarFormulario(datosFormulario).subscribe({
       next: res => {
         console.log('Respuesta del servidor:', res);
-        alert('¡Formulario enviado correctamente!');
+        alert('¡Gracias por contactarnos. Le responderemos lo antes posible.!');
+
+        this.nombre = '';
+        this.correo = '';
+        this.asunto = '';
+        this.mensaje = '';
       },
       error: err => {
         console.error('Error al enviar:', err);
@@ -54,15 +57,5 @@ export class InicioComponent implements OnInit {
     });
   }
 
-  cerrarModal() {
-    this.mostrarModal = false;
-  }
 
-  confirmarEdad(): void {
-    this.mostrarModal = false;
-  }
-
-  rechazarEdad(): void {
-    window.location.href = 'https://www.google.com';
-  }
 }

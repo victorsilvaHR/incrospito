@@ -44,10 +44,10 @@
   <div class="formulario-container">
     <h3 class="titulo-formulario">Contáctanos</h3>
     <form>
-      <input type="text" id="name" name="name" placeholder=" Nombre" />
-      <input type="email" id="email" name="email" placeholder="Correo electrónico " />
-      <input type="text" id="subject" name="subject" placeholder=" Asunto" />
-      <textarea id="message" name="message" placeholder="Mensaje "></textarea>
+      <input type="text" id="name" name="name" placeholder="Nombre" [(ngModel)]="nombre" />
+      <input type="email" id="email" name="email" placeholder="Correo electrónico" [(ngModel)]="correo" />
+      <input type="text" id="subject" name="subject" placeholder="Asunto" [(ngModel)]="asunto" />
+      <textarea id="message" name="message" placeholder="Mensaje" [(ngModel)]="mensaje"></textarea>
       <button type="button" class="btn-submit" (click)="enviarFormulario()">Enviar</button>
     </form>
   </div>

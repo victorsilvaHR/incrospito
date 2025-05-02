@@ -50,22 +50,20 @@
         <input type="email" id="email" name="email" placeholder="Correo electrónico" [(ngModel)]="correo" />
         <input type="text" id="subject" name="subject" placeholder="Asunto" [(ngModel)]="asunto" />
         <textarea id="message" name="message" placeholder="Mensaje" [(ngModel)]="mensaje"></textarea>
-        
-
         <button type="button" class="btn-submit" (click)="enviarFormulario()">Enviar</button>
       </form>
     </div>
   </div>
 
   <!-- Derecha: información de contacto -->
-  <div class="contact-right border-title" data-aos="fade-right" data-aos-duration="1000">
+  <div class="contact-right border-title" data-aos="fade-left" data-aos-duration="1000">
     <h3>Contáctanos</h3>
     <p>
       Estamos para servirte. Por favor déjanos tus datos y en breve nos pondremos en contacto contigo
     </p>
-
+  
     <div class="contact-grid">
-      <div class="contact-item">
+      <div class="contact-item" data-aos="fade-left" data-aos-delay="100">
         <div class="icon-title">
           <i class="fab fa-instagram"></i>
           <div class="text-block">
@@ -74,8 +72,8 @@
           </div>
         </div>
       </div>
-      
-      <div class="contact-item">
+  
+      <div class="contact-item" data-aos="fade-left" data-aos-delay="200">
         <div class="icon-title">
           <i class="fab fa-facebook-square"></i>
           <div class="text-block">
@@ -84,8 +82,8 @@
           </div>
         </div>
       </div>
-      
-      <div class="contact-item">
+  
+      <div class="contact-item" data-aos="fade-left" data-aos-delay="300">
         <div class="icon-title">
           <i class="fas fa-phone-alt"></i>
           <div class="text-block">
@@ -94,8 +92,8 @@
           </div>
         </div>
       </div>
-      
-      <div class="contact-item">
+  
+      <div class="contact-item" data-aos="fade-left" data-aos-delay="400">
         <div class="icon-title">
           <i class="fas fa-envelope"></i>
           <div class="text-block">
@@ -104,22 +102,11 @@
           </div>
         </div>
       </div>
-  </div>
-</div>
-<!-- Modal -->
-<div class="edad-overlay" *ngIf="mostrarModal">
-  <div class="edad-modal">
-    <img src="assets/logo.webp" alt="Logo" class="edad-logo" />
-
-    <h2 class="edad-titulo">Verificación de edad</h2>
-    <p class="edad-texto">Debes tener 18 o más para acceder al sitio web.</p>
-
-    <div class="edad-botones">
-      <button class="btn-morado" (click)="confirmarEdad()">Soy mayor de 18</button>
-      <button class="btn-contorno" (click)="rechazarEdad()">Soy menor :(</button>
     </div>
   </div>
-</div>
+  
+  
+
 
 
 
