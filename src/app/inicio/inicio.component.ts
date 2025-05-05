@@ -3,6 +3,8 @@ import { botellas } from '../utils/botellas';
 import * as AOS from 'aos';
 import { HttpClient } from '@angular/common/http';
 import { FormularioService } from '../services/formulario.service';
+import { AfterViewInit } from '@angular/core';
+
 
 
 @Component({
@@ -28,8 +30,10 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
     AOS.init({
       duration: 1000,
-      once: true,
-    });
+      once: true,    });
+  }
+  ngAfterViewInit(): void {
+    AOS.refresh();
   }
 
   enviarFormulario() {

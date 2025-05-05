@@ -62,6 +62,30 @@
 
 @media (max-width: 768px) {
   .footer-image {
-    width: 60%; /* Aumenta el tamaño en móviles */
+   width: 75%; /* Imagen más grande */
+   margin-top: 0;
+  }
+
+  .social-icon {
+    font-size: 2rem; /* Íconos más grandes */
+  }
+
+  .footer-link {
+    font-size: 1.2rem; /* Texto de enlaces más grande */
+  }
+
+  .footer-links {
+    gap: 2rem; /* Más espacio entre enlaces */
+  }
+
+  .footer-line {
+    height: 3px; /* Línea más gruesa */
+    margin-top: 3rem;
+  }
+
+  .footer-image-container {
+    padding-top: 80px;
+    margin-bottom: 3rem;
   }
 }
+
