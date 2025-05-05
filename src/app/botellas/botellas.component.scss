@@ -110,6 +110,8 @@
   justify-content: center;
   gap: 20px;
   padding-bottom: 40px;
+  margin-right: 0em;
+
 }
 
 .card-info {
@@ -146,10 +148,7 @@
     background-attachment: scroll; /* Cambiar a scroll en móvil */
     background-position: center;
   }
-  .galeria-botellas {
-    justify-content: flex-start;
-    padding: 0 16px 40px; /* agrega algo de margen lateral si lo deseas */
-  }
+ 
 
   /* Ajustar la posición del texto */
   .header-container {
@@ -189,7 +188,7 @@
   }
 
   .galeria-botellas {
-    gap: 10px;
+    gap: 15px;
   }
 
   .card-info {
