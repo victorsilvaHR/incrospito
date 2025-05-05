@@ -113,7 +113,7 @@
 }
 
 .card-info {
-  width: 180px;
+  width: 200px;
   text-align: center;
   background-color: #fff;
   border-radius: 10px;
@@ -122,7 +122,7 @@
 }
 
 .card-image img {
-  width: 200px;
+  width: 100px;
   height: auto;
   object-fit: cover;
 }
@@ -145,6 +145,10 @@
   .background-image {
     background-attachment: scroll; /* Cambiar a scroll en móvil */
     background-position: center;
+  }
+  .galeria-botellas {
+    justify-content: flex-start;
+    padding: 0 16px 40px; /* agrega algo de margen lateral si lo deseas */
   }
 
   /* Ajustar la posición del texto */
@@ -189,6 +193,6 @@
   }
 
   .card-info {
-    width: 150px;  /* Ajustar tamaño de las tarjetas */
+    width: 100px;  /* Ajustar tamaño de las tarjetas */
   }
 }
