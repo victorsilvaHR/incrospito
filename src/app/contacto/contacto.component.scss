@@ -91,6 +91,10 @@
     width: 100%;
     display: block;
   }
+  .card a {
+    color: inherit;         /* Hereda el color del texto del contenedor */
+    text-decoration: none;  /* Elimina el subrayado */
+  }
   
   .cards {
     position: absolute;
