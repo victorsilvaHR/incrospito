@@ -10,7 +10,7 @@ import { BotellasComponent } from './botellas/botellas.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
-  { path: 'inicio', component: InicioComponent },
+  { path: '', component: InicioComponent },
   { path: 'quienes-somos', component: QuienesSomosComponent },
   { path: 'tienda', component: TiendaComponent },
   { path: 'contacto', component: ContactoComponent },
