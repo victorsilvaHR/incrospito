@@ -22,16 +22,17 @@
   </div>
   
   <h3 class="titulo-secundario">Productos Vistos Recientemente</h3>
-  
+
   <div class="galeria-botellas">
-    <div *ngFor="let botella of botellasData" class="card-info">
-        <a [routerLink]="['/botella', botella.id]" class="card-image">
+    <div *ngFor="let botella of vistasRecientes" class="card-info">
+      <a [routerLink]="['/botella', botella.id]" class="card-image">
         <img [src]="botella.image" [alt]="botella.name" />
       </a>
       <span class="card-title">{{ botella.name }}</span>
       <span class="card-price">${{ botella.price }}</span>
     </div>
   </div>
+  
   
   
 
