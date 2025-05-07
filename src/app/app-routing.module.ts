@@ -9,14 +9,15 @@ import { PoliticaComponent } from './politica/politica.component';
 import { BotellasComponent } from './botellas/botellas.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
-  { path: '', component: InicioComponent },
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' },  
+  { path: 'inicio', component: InicioComponent },          
   { path: 'quienes-somos', component: QuienesSomosComponent },
   { path: 'tienda', component: TiendaComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'terminos', component: TerminosComponent },
   { path: 'politica', component: PoliticaComponent },
-  { path: 'botella/:id', component: BotellasComponent }
+  { path: 'botella/:id', component: BotellasComponent },
+  { path: '**', redirectTo: 'inicio', pathMatch: 'full' }  
 ];
 
 @NgModule({
