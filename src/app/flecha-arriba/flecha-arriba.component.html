@@ -1,7 +1,7 @@
 <!-- Botón vertical flotante minimalista -->
-<div class="vertical-social" *ngIf="showButton">
+<div class="vertical-social" >
   <!-- TOP -->
-  <div class="icon-block" (click)="scrollToTop()">
+  <div *ngIf="showButton" class="icon-block" (click)="scrollToTop()">
     <i class="fas fa-arrow-up"></i>
     <span>TOP</span>
   </div>

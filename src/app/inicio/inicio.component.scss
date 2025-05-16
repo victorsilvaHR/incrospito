@@ -3,6 +3,8 @@
   margin-bottom: 30px;
 }
 
+
+
 .top-image img {
   width: 100%;
   height: auto;
@@ -58,6 +60,8 @@
   transition: transform 0.3s ease;
   display: block;
   text-align: center;
+  margin-bottom: 1em;
+
 }
 
 .card-image:hover {
@@ -230,83 +234,98 @@ h2.centered-text {
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
+  background-color: transparent;
 }
 
 /* Lado izquierdo: formulario con fondo */
 .contact-left {
   flex: 1;
   background-image: url('/assets/formulario.webp');
-  background-size: inherit;
+  background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 55px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  background-position: center 2%;
-
+}
+.loader {
+  border: 6px solid rgba(255, 255, 255, 0.3); /* Ancho del borde más grueso */
+  border-top: 6px solid black;
+  border-radius: 50%;
+  width: 50px; 
+  height: 50px; 
+  animation: spin 0.8s linear infinite;
+  margin: 20px auto; 
 }
 
-.form-overlay {
-  padding: 13px;
-  border-radius: 8px;
-  width: 94%;
-  max-width: 614px;
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-.contact-left form {
+.btn-submit[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+.form-overlay-nf {
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.input-group {
   width: 100%;
+  margin-bottom: 20px;
 }
 
-.contact-left form input,
-.contact-left form textarea {
+.input-group input,
+.input-group textarea {
   width: 100%;
-  margin-bottom: 24px;
-  padding: 20px 0 6px 0;  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 18px 0 8px 0;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   background: transparent;
   color: white;
   transition: border-color 0.3s ease, border-width 0.3s ease;
-  font-size: 14px; 
-  font-weight: 100;
+  font-size: 14px;
+  font-weight: 200;
 }
 
-.contact-left form input:focus,
-.contact-left form textarea:focus {
+.input-group input:focus,
+.input-group textarea:focus {
   outline: none;
   border-bottom: 2px solid white;
 }
 
-.contact-left form input::placeholder,
-.contact-left form textarea::placeholder {
+.input-group input::placeholder,
+.input-group textarea::placeholder {
   color: white;
-  opacity: 1;
+  opacity: 0.8;
 }
 
-.contact-left form label {
-  display: none; 
-}
-
-
-.contact-left form button {
+.btn-submit-nf {
   display: block;
   width: 100%;
-  padding: 10px 20px;
-  margin-top: 20px;
+  padding: 14px 20px;
+  margin-top: 25px;
   background: #d3ad69;
   color: #ffffff;
   border: none;
   border-radius: 40px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 15px;
-  font-weight: 200; 
-
+  font-size: 14px;
+  font-weight: 200;
 }
 
-.contact-left form button:hover {
+.btn-submit-nf:hover {
   background-color: black;
 }
+
+
 
 
 /* Lado derecho: info de contacto */

@@ -3,7 +3,6 @@ import { botellas } from '../utils/botellas';
 import * as AOS from 'aos';
 import { HttpClient } from '@angular/common/http';
 import { FormularioService } from '../services/formulario.service';
-import { AfterViewInit } from '@angular/core';
 
 
 
@@ -16,10 +15,13 @@ export class InicioComponent implements OnInit {
 
   botellas = botellas;
 
-  nombre: string = '';
-  correo: string = '';
-  asunto: string = '';
-  mensaje: string = '';
+  inicio = {
+    nombre: '',
+    correo: '',
+    asunto: '',
+    mensaje: ''
+  };
+  cargando = false; 
 
 
   constructor(
@@ -37,28 +39,40 @@ export class InicioComponent implements OnInit {
   }
 
   enviarFormulario() {
-    const datosFormulario = {
-      nombre: this.nombre,
-      correo: this.correo,
-      asunto: this.asunto,
-      mensaje: this.mensaje
+    if (this.validarFormulario()) {
+      this.cargando = true; 
+      this.formularioService.guardarFormulario(this.inicio).subscribe({
+        next: res => {
+          console.log('Respuesta del servidor:', res);
+          alert('¡Gracias por contactarnos. Le responderemos lo antes posible!');
+          this.limpiarFormulario();
+        },
+        error: err => {
+          console.error('Error al enviar:', err);
+          alert('Hubo un problema al enviar el formulario.');
+        },
+        complete: () => {
+          this.cargando = false; // Desactivar el loader
+        }
+      });
+    }
+  }
+
+  validarFormulario(): boolean {
+    if (!this.inicio.nombre && !this.inicio.correo && !this.inicio.asunto && !this.inicio.mensaje) {
+      alert('Por favor, completa todos los campos.');
+      return false;
+    }
+    return true;
+  }
+
+  limpiarFormulario() {
+  this.inicio = {
+      nombre: '',
+      correo: '',
+      asunto: '',
+      mensaje: ''
     };
-
-    this.formularioService.guardarFormulario(datosFormulario).subscribe({
-      next: res => {
-        console.log('Respuesta del servidor:', res);
-        alert('¡Gracias por contactarnos. Le responderemos lo antes posible.!');
-
-        this.nombre = '';
-        this.correo = '';
-        this.asunto = '';
-        this.mensaje = '';
-      },
-      error: err => {
-        console.error('Error al enviar:', err);
-        alert('Hubo un problema al enviar el formulario.');
-      }
-    });
   }
 
 

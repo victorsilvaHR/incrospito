@@ -3,6 +3,12 @@
     align-items: center;
     padding: 10px 30px;
     background-color: #fefef9;
+    .menu a.active {
+      color: #fff;
+      background-color: #282268;
+      font-weight: bold;
+    }
+    
     
     .logo-container {
       flex: 1;

@@ -1,3 +1,4 @@
+
 <div class="top-image">
   <img src="assets/Incrospito-mexico.webp" alt="Incrospito México" />
 </div>
@@ -42,18 +43,31 @@
 </div>
 </div>
 <div class="contact-section">
+  
   <!-- Izquierda: formulario con imagen de fondo -->
   <div class="contact-left">
-    <div class="form-overlay">
-      <form>
-        <input type="text" id="name" name="name" placeholder="Nombre" [(ngModel)]="nombre" />
-        <input type="email" id="email" name="email" placeholder="Correo electrónico" [(ngModel)]="correo" />
-        <input type="text" id="subject" name="subject" placeholder="Asunto" [(ngModel)]="asunto" />
-        <textarea id="message" name="message" placeholder="Mensaje" [(ngModel)]="mensaje"></textarea>
-        <button type="button" class="btn-submit" (click)="enviarFormulario()">Enviar</button>
-      </form>
+    <div class="form-overlay-nf">
+      <div class="input-group">
+        <input type="text" id="inicio-name" name="name" placeholder="Nombre" [(ngModel)]="inicio.nombre"/>
+      </div>
+      <div class="input-group">
+        <input type="email" id="inicio-correo" name="correo" placeholder="Correo electrónico" [(ngModel)]="inicio.correo"/>
+      </div>
+      <div class="input-group">
+        <input type="text" id="inicio-asunto" name="asunto" placeholder="Asunto" [(ngModel)]="inicio.asunto"/>
+      </div>
+      <div class="input-group">
+        <textarea id="inicio-mensaje" name="message" placeholder="Mensaje" [(ngModel)]="inicio.mensaje"></textarea>
+      </div>
+      <div *ngIf="cargando" class="loader"></div>
+      <button type="button" class="btn-submit-nf" [disabled]="cargando" (click)="enviarFormulario()">
+        <span *ngIf="!cargando">Enviar</span>
+      </button>
     </div>
   </div>
+  
+  
+  
 
   <!-- Derecha: información de contacto -->
   <div class="contact-right border-title" data-aos="fade-left" data-aos-duration="1000">
