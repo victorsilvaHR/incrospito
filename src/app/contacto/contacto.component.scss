@@ -3,7 +3,7 @@
     background-image: url('/assets/Incrospito5.webp');    background-size: cover;
     background-attachment: fixed;
     background-position: center 60%;
-    background-size: 205%; /* Aumenta del 100% al 120% */
+    background-size: 180%; /* Aumenta del 100% al 120% */
     position: absolute;
     width: 100%;
     height: 56%;
@@ -29,11 +29,14 @@
   
   .overlay {
     position: absolute;
-    top: -20px;    left: 0;
+    content: "";
+    display: block;
     width: 100%;
-    height: 63%; /* Que tome solo el tamaño del header */
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .74;
     background: #282268;
-    opacity: 0.74;
     z-index: -1;
   }
   .entrega {
@@ -60,16 +63,18 @@
     letter-spacing: 2px;
     width: 100%;
     margin-bottom: 15px;
-    font-size: 2.25em;
-
+    font-size: 29.25px;
+    font-family: Work Sans;
+      font-weight: 600;
   }
   
-  /* Texto secundario */
   .subtitulo-contacto {
-    font-size: 1rem;
-    font-weight: 300; /* Más fina */
-    margin: 0;
-    color: white;
+    font-size: 13px;
+    padding-right: 2px;
+    margin-right: 2px;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 2px;
   }
   
   .logo {
