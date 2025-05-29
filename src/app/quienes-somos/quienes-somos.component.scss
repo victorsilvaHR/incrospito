@@ -1,9 +1,8 @@
 .background-image {
-  background-image: url('/assets/Incrospito5.webp');
-  background-size: cover;
+  background-image: url('/assets/Incrospito5.webp');    background-size: cover;
   background-attachment: fixed;
   background-position: center 60%;
-  background-size: 200%; /* Aumenta el tamaño de la imagen */
+  background-size: 205%; /* Aumenta del 100% al 120% */
   position: absolute;
   width: 100%;
   height: 54%;
@@ -11,59 +10,55 @@
   content: '';
   left: 0;
   top: 0;
-  opacity: 0.74;
-  image-rendering: auto; /* Suaviza la imagen */
-
+  opacity: .74;
 }
-
-/* Estilo del Header */
-.header-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 69px;
-  color: white;
-  text-align: center;
-  z-index: 1;
-  overflow: hidden;
-}
-
-/* Overlay */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #282268;
-  opacity: 0.74;
-  z-index: -1;
-}
-
-/* Títulos */
-.titulo-contacto {
-  color: #fff;
-  display: inline-block;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  width: 100%;
-  margin-bottom: 15px;
-  font-size: 29.25px;
-  font-family: Work Sans;
-    font-weight: 600;
-}
-
-.subtitulo-contacto {
-  font-size: 13px;
-  padding-right: 2px;
-  margin-right: 2px;
-  color: #fff;
-  font-weight: 100;
-  letter-spacing: 2px;
-}
+  .header-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 74px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 20px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Que tome solo el tamaño del header */
+    background: #282268;
+    opacity: 0.74;
+    z-index: -1;
+  }
+    /* Texto principal */
+    .titulo-contacto {
+      color: #fff;
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      width: 100%;
+      margin-bottom: 15px;
+      font-size: 29.25px;
+      font-family: Work Sans;
+        font-weight: 600;
+    }
+    
+    .subtitulo-contacto {
+      font-size: 13px;
+      padding-right: 2px;
+      margin-right: 2px;
+      color: #fff;
+      font-weight: 100;
+      letter-spacing: 2px;
+    }
 
 .fondo-blanco-productos {
   background-color: #fff;
@@ -193,6 +188,20 @@
   position: relative;
   z-index: 1;
   margin-left: -29%;
+}
+.tarjeta-valores {
+  background-color: #ffffff;
+  // padding: 30px;
+  box-shadow: 10px 10px 20px rgba(222, 222, 222, 1);
+  max-width: 500px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+  margin-left: -29%;
+}
+.tarjeta-valores:hover {
+  background-color: #22caca;
+
 }
 
 .tarjeta-mision:hover {

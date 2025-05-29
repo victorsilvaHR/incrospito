@@ -3,8 +3,8 @@ export const botellas = [
     id:1,
     name: 'ESPADÍN SUAVECITO',
     price: '690',
-    image: 'assets/espadin-suavecito.webp',
-    url: '/espadin-suavecito',
+    image: 'assets/espadin_suavecito.jpg',
+    url: '/espadin_suavecito',
     desc:'Nuestro mezcal ideal para esos paladares delicados que buscan incursionar en el mundo del mezcal “beso a besito”. Con tan solo 38% Alc. Vol. aprenderás a degustar y distinguir la esencia de este destilado tan simple pero complejo. Se presta también a la mixología, especialmente con bebidas frescas y agridulces como una buena mezcalita de tamarindo, jamaica o maracuyá.”'
   },
   { 

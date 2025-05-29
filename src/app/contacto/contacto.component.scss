@@ -6,7 +6,7 @@
     background-size: 180%; /* Aumenta del 100% al 120% */
     position: absolute;
     width: 100%;
-    height: 56%;
+    height: 52%;
     z-index: -2;
     content: '';
     left: 0;
@@ -16,15 +16,18 @@
   
   /* Capa transparente morada encima del fondo */
   .header-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 73px;
+    padding: 74px;
     color: white;
     text-align: center;
     z-index: 1;
     overflow: hidden;
+    width: 100%;
+    height: 240px;
   }
   
   .overlay {
@@ -32,7 +35,7 @@
     content: "";
     display: block;
     width: 100%;
-    height: 100%;
+    height: 56%;
     left: 0;
     top: 0;
     opacity: .74;
