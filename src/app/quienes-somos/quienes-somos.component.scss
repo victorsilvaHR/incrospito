@@ -24,7 +24,7 @@
     z-index: 1;
     overflow: hidden;
     width: 100%;
-    height: 20px;
+    height: 240px;
   }
   
   .overlay {
@@ -305,46 +305,115 @@
 
 /* En móviles, ajustar flexbox para que las imágenes se alineen verticalmente */
 @media (max-width: 768px) {
-  /* Header */
+  .background-image {
+    background-size: 190%; /* Aumentar el tamaño de la imagen */
+    background-position: center -200px; /* Asegurarse de que la parte superior de la imagen esté visible */
+  }
+  
+  .overlay {
+    height: 80vh; /* Puedes ajustar la altura de la superposición en móviles */
+  }
+
   .header-container {
-    padding: 50px 20px; /* Reducir el padding */
+    padding: 40px 20px;
   }
 
   .titulo-contacto {
-    font-size: 1.5em; /* Reducir el tamaño del título */
-    margin-bottom: 10px;
+    font-size: 1.5em;
   }
 
   .subtitulo-contacto {
     font-size: 0.9rem;
   }
 
-  /* Sección gastronomía y otras secciones flex */
-  .seccion-gastronomia, .grid__uniform, .seccion-mision {
+  .overlay-text {
+    top: 30%;
+    right: 5%;
+    font-size: 16px;
+    align-items: flex-end;
+  }
+
+  .select-gallery-wrapper {
     flex-direction: column;
-    gap: 20px; /* Menor espacio entre los elementos */
+    align-items: center;
   }
 
-  .imagen-mision img, .imagen-vision img {
-    max-width: 100%; /* Las imágenes no deben exceder el 100% */
-    margin-left: 0;
-  }
-
-  .tarjeta-mision, .tarjeta-vision {
-    margin-left: 0;
-    margin-right: 0;
+  .custom-select {
+    width: 100%;
     max-width: 100%;
   }
 
-  .ventana-historia .main-title h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    gap: 15px;
   }
 
-  /* Ajuste en las tarjetas */
-  .tarjeta-mision, .tarjeta-vision {
+  .first-row, .second-row {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    gap: 15px;
+  }
+
+  .card-image {
+    width: 140px;
+  }
+
+  .card-info {
+    width: 140px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .card-price {
+    font-size: 12px;
+  }
+
+  .select-button {
+    width: 100%;
+    font-size: 18px;
+  }
+  .tarjeta-valores{
     max-width: 100%;
     padding: 20px;
-    box-shadow: none; /* Para que no se vea demasiado "pesado" en móviles */
-  }
+    box-shadow: none;
 }
+/* Ajustar secciones tipo tarjeta para que se vean en columna */
+.seccion-mision,
+.seccion-vision,
+.seccion-mision-reversa {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tarjetas ocupan ancho completo */
+.tarjeta-mision,
+.tarjeta-vision,
+.tarjeta-valores {
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(222, 222, 222, 1);
+}
+
+/* Imágenes ocupan todo el ancho disponible */
+.imagen-mision img,
+.imagen-vision img {
+  max-width: 100%;
+  margin: 0;
+  box-shadow: none;
+}
+
+/* Texto dentro de las tarjetas más legible en móvil */
+.mision-titulo,
+.vision-titulo,
+.mision-texto,
+.vision-texto,
+.valores-completo {
+  font-size: 15px;
+  text-align: justify;
+  padding: 10px 0;
+}
+
+  }
+
