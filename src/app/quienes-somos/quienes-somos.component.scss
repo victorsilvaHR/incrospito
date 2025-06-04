@@ -189,6 +189,15 @@
   z-index: 1;
   margin-left: -29%;
 }
+.seccion-valores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  position: relative;
+  flex-wrap: wrap;
+}
 .tarjeta-valores {
   background-color: #ffffff;
   // padding: 30px;
@@ -199,9 +208,33 @@
   z-index: 1;
   margin-left: -29%;
 }
+.imagen-valores img {
+  width: 100%;
+  max-width: 450px;
+  max-height: 280px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateX(-345px); /* mueve la imagen a la izquierda */
+}
+
 .tarjeta-valores:hover {
   background-color: #22caca;
 
+}
+.valores-completo {
+  font-size: 16px;
+  line-height: 1.3;
+  color: #333;
+  font-weight: 300;
+  text-align: start;
+  margin: 0;
+  padding: 9%;
+}
+
+.valores-completo strong {
+  font-weight: bold;
+  margin-right: 4px;
 }
 
 .tarjeta-mision:hover {
@@ -237,24 +270,28 @@
 
 .seccion-vision {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
-  position: relative;
-  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
 }
 
 .tarjeta-vision {
-  background-color: #ffffff;
-  padding: 30px 40px;
-  box-shadow: 10px 10px 20px rgba(222, 222, 222, 1);
-  max-width: 600px;
+  background: white;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 500px;
+  font-size: 1.2rem;
+  flex: 1 1 300px;
+
   position: relative;
-  z-index: 2;
-  margin-right: -100px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  left: 66px; /* mueve la tarjeta 30px a la derecha */
+  z-index: 2; /* asegúrate de que quede encima de la imagen */
 }
+
+
+
 
 .tarjeta-vision:hover {
   background-color: #22caca;
@@ -266,10 +303,15 @@
 }
 
 .imagen-vision img {
-  max-width: 80%;
+  width: 100%;
+  max-width: 472px;
+  max-height: 380px;
   height: auto;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
+
+
 
 .vision-titulo {
   font-size: 18px;
@@ -287,20 +329,7 @@
   color: #333;
 }
 
-.valores-completo {
-  font-size: 16px;
-  line-height: 1.3;
-  color: #333;
-  font-weight: 300;
-  text-align: start;
-  margin: 0;
-  padding: 9%;
-}
 
-.valores-completo strong {
-  font-weight: bold;
-  margin-right: 4px;
-}
 
 
 /* En móviles, ajustar flexbox para que las imágenes se alineen verticalmente */
@@ -311,11 +340,12 @@
   }
   
   .overlay {
-    height: 80vh; /* Puedes ajustar la altura de la superposición en móviles */
+    height: 34vh; /* Puedes ajustar la altura de la superposición en móviles */
   }
 
   .header-container {
     padding: 40px 20px;
+    margin-bottom: -3em;
   }
 
   .titulo-contacto {

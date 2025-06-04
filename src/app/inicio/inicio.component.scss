@@ -211,23 +211,28 @@ h2.centered-text {
   background-color: #f7f7f7;
   margin-top: 9px;
   padding-top: 5px;
+  padding-bottom: 2px; /* Reduce este valor */
+  margin-bottom: 30px; /* Mantiene separación respecto al contenido siguiente */
 }
 
 /* Grid para las imágenes: 3 columnas (dos filas al tener 6 imágenes) */
 .images-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;             
-  margin-top: 60px;       
+  margin-top: 10px;   
+  row-gap: px;
+
 }
 
 /* Reducir el tamaño de las imágenes y centrarlas en su celda */
 .images-container img {
-  width: 100%;             /* Ajusta el porcentaje para que sean más pequeñas */
-  height: auto;
+  width: 100%;      
   display: block;
   margin: 30px 0;
   padding: 0 15px;      /* Centra la imagen dentro de la celda */
+  aspect-ratio: 1 / 1;  
+  object-fit: cover; 
+  display: block;
 }
 .contact-section {
   display: flex;

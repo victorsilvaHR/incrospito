@@ -308,16 +308,18 @@
   /* Estilos para móviles */
 @media (max-width: 768px) {
   .background-image {
-    background-size: 215%; /* Aumentar el tamaño de la imagen */
-    background-position: center -190px; /* Asegurarse de que la parte superior de la imagen esté visible */
+    background-size: 190%; /* Aumentar el tamaño de la imagen */
+    background-position: center -200px; /* Asegurarse de que la parte superior de la imagen esté visible */
   }
   
   .overlay {
-    height: 60vh; /* Puedes ajustar la altura de la superposición en móviles */
+    height: 34vh; /* Puedes ajustar la altura de la superposición en móviles */
   }
 
   .header-container {
     padding: 40px 20px;
+    margin-bottom: -3em;
+
   }
 
   .titulo-contacto {

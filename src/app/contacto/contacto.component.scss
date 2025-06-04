@@ -1,19 +1,18 @@
 /* Fondo de imagen estático */
 .background-image {
-    background-image: url('/assets/Incrospito5.webp');    background-size: cover;
-    background-attachment: fixed;
-    background-position: center 60%;
-    background-size: 180%; /* Aumenta del 100% al 120% */
-    position: absolute;
-    width: 100%;
-    height: 52%;
-    z-index: -2;
-    content: '';
-    left: 0;
-    top: 35px;
-    opacity: .74;
-  }
-  
+  background-image: url('/assets/Incrospito5.webp');    background-size: cover;
+  background-attachment: fixed;
+  background-position: center 60%;
+  background-size: 205%; /* Aumenta del 100% al 120% */
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  z-index: -2;
+  content: '';
+  left: 0;
+  top: 0;
+  opacity: .74;
+}
   /* Capa transparente morada encima del fondo */
   .header-container {
     position: relative;
@@ -32,23 +31,26 @@
   
   .overlay {
     position: absolute;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 56%;
-    left: 0;
     top: 0;
-    opacity: .74;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Que tome solo el tamaño del header */
     background: #282268;
+    opacity: 0.74;
     z-index: -1;
   }
   .entrega {
     background-color: #282268;
     color: white;
     text-align: center;
-    padding: 12px; /* para que tenga espacio interno */
-    margin-top: 0em;
+    padding: 12px;
+    margin-top: 8px;
   
+    position: relative;
+    left: 50%;
+    right: 50%;
+    width: 100vw; /* ocupa todo el ancho de la ventana */
+    transform: translateX(-50%); /* centra el elemento */
   }
   .texto-delgado {
     font-weight: 400;
@@ -138,6 +140,8 @@
     transition: all 0.3s ease;
     cursor: pointer;
     text-align: center; 
+    min-height: 210px;
+
 
   }
   
@@ -326,18 +330,18 @@
 @media screen and (max-width: 768px) {
 
   .background-image {
-    background-size: 240%; /* Aumentar el tamaño de la imagen */
-    background-position: center -150px; /* Asegurarse de que la parte superior de la imagen esté visible */
+    background-size: 190%; /* Aumentar el tamaño de la imagen */
+    background-position: center -200px; /* Asegurarse de que la parte superior de la imagen esté visible */
   }
   
   .overlay {
-    height: 60vh; /* Puedes ajustar la altura de la superposición en móviles */
+    height: 34vh; /* Puedes ajustar la altura de la superposición en móviles */
   }
 
   .header-container {
     padding: 40px 20px; /* Más espacio arriba y abajo */
     text-align: center; /* Centrar contenido */
-    margin-bottom: -7em;
+    margin-bottom: -8em;
 
   }
 
