@@ -1,13 +1,14 @@
 .background-image {
-  background-image: url('/assets/Incrospito5.webp');    background-size: cover;
+  background-image: url('/assets/23SuavecitoFrutas.jpg');    background-size: cover;
+  background-position: 50% 65%;      /* posición más a la derecha y un poco hacia abajo */
+  background-size: 150% auto;
   background-attachment: fixed;
-  background-position: center 60%;
-  background-size: 205%; /* Aumenta del 100% al 120% */
+  background-repeat: no-repeat;
+  padding: 81px 0;  
   position: absolute;
   width: 100%;
-  height: 54%;
+  height: 50%;
   z-index: -2;
-  content: '';
   left: 0;
   top: 0;
   opacity: .74;
