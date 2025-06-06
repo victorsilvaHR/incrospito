@@ -332,10 +332,15 @@
   .background-image {
     background-size: 190%; /* Aumentar el tamaño de la imagen */
     background-position: center -200px; /* Asegurarse de que la parte superior de la imagen esté visible */
+    height: 300px; /* o el valor que mejor se adapte */
+    background-attachment: scroll;
+  }
+  .entrega {
+    margin-top: -25px;
   }
   
   .overlay {
-    height: 34vh; /* Puedes ajustar la altura de la superposición en móviles */
+    height: 300px;
   }
 
   .header-container {
