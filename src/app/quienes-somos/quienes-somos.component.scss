@@ -335,12 +335,11 @@
 /* En móviles, ajustar flexbox para que las imágenes se alineen verticalmente */
 @media (max-width: 768px) {
   .background-image {
-    background-size: 190%; /* Aumentar el tamaño de la imagen */
-    background-position: center -200px; /* Asegurarse de que la parte superior de la imagen esté visible */
-    height: 300px; /* o el valor que mejor se adapte */
-    background-attachment: scroll;
+    background-size: 190%;
+    background-position: center -200px;
+    height: 300px;
   }
-  
+
   .overlay {
     height: 300px;
   }
@@ -375,20 +374,14 @@
     max-width: 100%;
   }
 
-  .image-gallery {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+  .image-gallery,
+  .first-row,
+  .second-row {
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 
-  .first-row, .second-row {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
-    gap: 15px;
-  }
-
-  .card-image {
-    width: 140px;
-  }
-
+  .card-image,
   .card-info {
     width: 140px;
   }
@@ -405,47 +398,113 @@
     width: 100%;
     font-size: 18px;
   }
-  .tarjeta-valores{
-    max-width: 100%;
-    padding: 20px;
-    box-shadow: none;
-}
-/* Ajustar secciones tipo tarjeta para que se vean en columna */
-.seccion-mision,
-.seccion-vision,
-.seccion-mision-reversa {
-  flex-direction: column;
-  align-items: center;
-}
 
-/* Tarjetas ocupan ancho completo */
-.tarjeta-mision,
-.tarjeta-vision,
-.tarjeta-valores {
-  max-width: 100%;
-  margin: 0;
-  padding: 20px;
-  box-shadow: 5px 5px 10px rgba(222, 222, 222, 1);
-}
+  /* ✅ CORREGIDO: centrar completamente cada sección */
+    /* ---------------- MISIÓN ---------------- */
+    .seccion-mision {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+  
+    .imagen-mision {
+      width: 100%;
+      display: flex;
+      justify-content: center;
 
-/* Imágenes ocupan todo el ancho disponible */
-.imagen-mision img,
-.imagen-vision img {
-  max-width: 100%;
-  margin: 0;
-  box-shadow: none;
-}
+    }
+  
+    .imagen-mision img {
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+      display: block;
+      margin-right: -6em;
 
-/* Texto dentro de las tarjetas más legible en móvil */
-.mision-titulo,
-.vision-titulo,
-.mision-texto,
-.vision-texto,
-.valores-completo {
-  font-size: 15px;
-  text-align: justify;
-  padding: 10px 0;
-}
+    }
+  
+    .tarjeta-mision {
+      width: 90%;
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    /* ---------------- VISIÓN ---------------- */
+    .seccion-vision {
+      display: flex;
+      flex-direction: column-reverse; /* Imagen debajo del texto */
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      margin-bottom: 40px;
+      margin-top: -6em;
+    }
+  
+    .imagen-vision {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .imagen-vision img {
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+      display: block;
+    }
+  
+    .tarjeta-vision {
+      width: 90%;
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;      
+      margin-left: -2em;
 
+    }
+  
+    /* ---------------- VALORES ---------------- */
+    .seccion-valores {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      margin-top: -6em;
+    }
+  
+    .imagen-valores {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .imagen-valores img {
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+      margin-left: 180%;
+
+    }
+  
+    .tarjeta-valores {
+      width: 90%;
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+      margin-right: 1em;
+
+    }
   }
+  
+
+
+
+
+
+
+  
 
