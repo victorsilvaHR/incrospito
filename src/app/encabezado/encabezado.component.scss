@@ -1,0 +1,90 @@
+.background-image {
+  background-image: url('/assets/23SuavecitoFrutas.jpg');    background-size: cover;
+  background-position: 50% 65%;      /* posición más a la derecha y un poco hacia abajo */
+  background-size: 150% auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 81px 0;  
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  z-index: -2;
+  left: 0;
+  top: 0;
+  opacity: .74;
+}
+.header-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 74px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  height: 240px;
+}
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 26rem; /* Que tome solo el tamaño del header */
+    background: #282268;
+    opacity: 0.5;
+    z-index: -1;
+  }
+    /* Texto principal */
+    .titulo-contacto {
+      color: #fff;
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      width: 100%;
+      margin-bottom: 15px;
+      font-size: 29.25px;
+      font-family: Work Sans;
+        font-weight: 600;
+    }
+    
+    .subtitulo-contacto {
+      font-size: 13px;
+      padding-right: 2px;
+      margin-right: 2px;
+      color: #fff;
+      font-weight: 100;
+      letter-spacing: 2px;
+    }
+
+@media (max-width: 768px) {
+  .background-image {
+    background-size: cover; /* Mantiene proporción sin recortar tanto */
+    background-position: center;
+    background-attachment: scroll; /* Mejora compatibilidad en móviles */
+    height: 300px; /* Aumenta la altura */
+    padding: 60px 0; /* Más espacio para contenido */
+  }
+
+  .header-container {
+    padding: 40px 20px;
+    height: 177px; /* Que ocupe el mismo alto que la imagen */
+  }
+
+  .titulo-contacto {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .subtitulo-contacto {
+    font-size: 13px;
+  }
+
+  .overlay {
+    height: 300px; /* Debe coincidir con la altura del fondo */
+  }
+}

@@ -1,62 +1,64 @@
-.background-image {
-  background-image: url('/assets/23SuavecitoFrutas.jpg');    background-size: cover;
-  background-position: 50% 65%;      /* posición más a la derecha y un poco hacia abajo */
-  background-size: 150% auto;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  padding: 81px 0;  
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  z-index: -2;
-  left: 0;
-  top: 0;
-  opacity: .74;
-}
+// .background-image {
+//   background-image: url('/assets/23SuavecitoFrutas.jpg');    background-size: cover;
+//   background-position: 50% 65%;      /* posición más a la derecha y un poco hacia abajo */
+//   background-size: 150% auto;
+//   background-attachment: fixed;
+//   background-repeat: no-repeat;
+//   padding: 81px 0;  
+//   position: absolute;
+//   width: 100%;
+//   height: 50%;
+//   z-index: -2;
+//   left: 0;
+//   top: 0;
+//   opacity: .74;
+// }
+//   .header-container {
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     padding: 74px;
+//     color: white;
+//     text-align: center;
+//     z-index: 1;
+//     overflow: hidden;
+//     width: 100%;
+//     height: 240px;
+//   }
   
-  /* Capa transparente morada encima del fondo */
-  .header-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 70px;
-    color: white;
-    text-align: center;
-    z-index: 1;
-    overflow: hidden;
-  }
+//   .overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%; /* Que tome solo el tamaño del header */
+//     background: #282268;
+//     opacity: 0.74;
+//     z-index: -1;
+//   }
   
-  .overlay {
-    position: absolute;
-    top: -20px;    left: 0;
-    width: 100%;
-    height: 57%; /* Que tome solo el tamaño del header */
-    background: #282268;
-    opacity: 0.74;
-    z-index: -1;
-  }
-  
-  /* Texto principal */
-  .titulo-contacto {
-    color: #fff;
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    width: 100%;
-    margin-bottom: 15px;
-    font-size: 2.25em;
+//   /* Texto principal */
+//   .titulo-contacto {
+//     color: #fff;
+//     display: inline-block;
+//     text-align: center;
+//     text-transform: uppercase;
+//     letter-spacing: 2px;
+//     width: 100%;
+//     margin-bottom: 15px;
+//     font-size: 2.25em;
 
-  }
+//   }
   
-  /* Texto secundario */
-  .subtitulo-contacto {
-    font-size: 1rem;
-    font-weight: 300; /* Más fina */
-    margin: 0;
-    color: white;
-  }
+//   /* Texto secundario */
+//   .subtitulo-contacto {
+//     font-size: 1rem;
+//     font-weight: 300; /* Más fina */
+//     margin: 0;
+//     color: white;
+//   }
   .titulo {
     font-size: 50px;
     color: #181818;
@@ -78,7 +80,12 @@
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
+ 
   }
+  .linea {
+  height: 15px;
+  background-color: white;
+}
   
   .politica-privacidad .section-header {
     font-size: 2rem;

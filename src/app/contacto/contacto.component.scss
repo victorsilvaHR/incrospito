@@ -1,51 +1,55 @@
-/* Fondo de imagen estático */
-.background-image {
-  background-image: url('/assets/23SuavecitoFrutas.jpg');    background-size: cover;
-  background-position: 50% 65%;      /* posición más a la derecha y un poco hacia abajo */
-  background-size: 150% auto;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  padding: 81px 0;  
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  z-index: -2;
-  left: 0;
-  top: 0;
-  opacity: .74;
-}
-  /* Capa transparente morada encima del fondo */
-  .header-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 74px;
-    color: white;
-    text-align: center;
-    z-index: 1;
-    overflow: hidden;
-    width: 100%;
-    height: 240px;
-  }
+// /* Fondo de imagen estático */
+// .background-image {
+//   background-image: url('/assets/23SuavecitoFrutas.jpg');    background-size: cover;
+//   background-position: 50% 65%;      /* posición más a la derecha y un poco hacia abajo */
+//   background-size: 150% auto;
+//   background-attachment: fixed;
+//   background-repeat: no-repeat;
+//   padding: 81px 0;  
+//   position: absolute;
+//   width: 100%;
+//   height: 50%;
+//   z-index: -2;
+//   left: 0;
+//   top: 0;
+//   opacity: .74;
+// }
+//   /* Capa transparente morada encima del fondo */
+//   .header-container {
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     padding: 74px;
+//     color: white;
+//     text-align: center;
+//     z-index: 1;
+//     overflow: hidden;
+//     width: 100%;
+//     height: 240px;
+//   }
   
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%; /* Que tome solo el tamaño del header */
-    background: #282268;
-    opacity: 0.74;
-    z-index: -1;
-  }
+//   .overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 50%; /* Que tome solo el tamaño del header */
+//     background: #282268;
+//     opacity: 0.74;
+//     z-index: -1;
+//   }
+.linea {
+  height: 15px;
+  background-color: white;
+}
   .entrega {
     background-color: #282268;
     color: white;
     text-align: center;
     padding: 12px;
-    margin-top: 8px;
+    margin-top: 0px;
   
     position: relative;
     left: 50%;
@@ -253,6 +257,7 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
   
   .btn-submit[disabled] {
     opacity: 0.6;
@@ -297,6 +302,7 @@
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
 
+
   }
   
   .formulario-container textarea {
@@ -326,14 +332,22 @@
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 3rem;
-  margin-top: -44rem;
+  margin-top: 15rem; 
   text-align: center;
-  margin-top: -150%;
-  letter-spacing: 0em;
-  font-family: Work Sans;
-
-
+  font-family: 'Work Sans';
 }
+
+.fondo-imagen-con-cards {
+  background-image: url('/assets/textura.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 1rem; /* Espaciado interno opcional */
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 768px) {
 
   .background-image {
@@ -343,8 +357,12 @@
     background-attachment: scroll;
   }
   .entrega {
-    margin-top: -25px;
+    margin-top: 0%;
   }
+    linea {
+  height: 13px;
+  background-color: white;
+}
   
   .overlay {
     height: 300px;
@@ -385,7 +403,7 @@
   }
 
   .fondo-blanco-ajustable {
-    margin-top: 5rem; /* Separarlo bastante */
+    margin-top: 0rem; /* Separarlo bastante */
     height: auto;
     padding: 2rem 1rem;
   }
@@ -398,7 +416,7 @@
 
   .titulo-formulario {
     font-size: 1.8rem;
-    margin-top: 350px;
+    margin-top: 225%;
     margin-bottom: 50px;
   }
 

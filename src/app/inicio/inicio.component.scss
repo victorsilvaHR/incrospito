@@ -63,6 +63,10 @@
   margin-bottom: 1em;
 
 }
+.ajustar-imagen {
+padding-bottom: .6em;
+}
+
 
 .card-image:hover {
   transform: scale(1.05);
@@ -70,7 +74,7 @@
 
 .card-image img {
   width: 104%;
-  height: auto;
+  height: 14rem;
   // display: block;
 }
 
@@ -480,6 +484,8 @@ h2.centered-text {
 }
 
 
+
+
 /* ---- Ajustes para vista móvil ---- */
 /* ---- Ajustes para vista móvil ---- */
 @media (max-width: 768px) {
@@ -492,7 +498,7 @@ h2.centered-text {
 
   .image-gallery {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px 30px;
+    gap: 20px ;
     padding: 40px 20px;
   }
 

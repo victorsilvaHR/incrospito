@@ -8,7 +8,11 @@
     <div class="image-gallery">
       <div *ngFor="let botella of botellas" class="card-info">
         <a [routerLink]="['/botella', botella.id]" class="card-image">
-          <img [src]="botella.image" [alt]="botella.name" />
+<img [src]="botella.image"[alt]="botella.name"
+  [ngClass]="{
+    'ajustar-imagen': botella.id === 2 || botella.id ===  3|| botella.id === 4
+  }"
+/>
         </a>
         <span class="card-title">{{ botella.name }}</span>
         <span class="card-price">${{ botella.price }}</span>
@@ -37,7 +41,7 @@
 <div class="images-container">
   <img src="assets/OMAR9945.jpg" alt="Incrospito1">
   <img src="assets/OMAR9842.jpg" alt="Incrospito2">
-  <img src="assets/OMAR9819.jpg" alt="Incrospito3">
+  <img src="assets/OMAR9810.jpg" alt="Incrospito3">
   <img src="assets/InscrospitoCamaSal.jpg"  alt="Incrospito4">
   <img src="assets/Incrospito5.webp" alt="incrospito5">
   <img src="assets/Incrospito6.webp" alt="Incrospito6">

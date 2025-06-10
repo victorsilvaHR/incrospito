@@ -15,6 +15,7 @@ import { PoliticaComponent } from './politica/politica.component';
 import { BotellasComponent } from './botellas/botellas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { EncabezadoComponent } from './encabezado/encabezado.component';
 
 
 
@@ -31,6 +32,7 @@ import { FormsModule } from '@angular/forms';
     TerminosComponent,
     PoliticaComponent,
     BotellasComponent,
+    EncabezadoComponent,
     
   ],
   imports: [

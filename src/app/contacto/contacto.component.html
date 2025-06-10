@@ -1,66 +1,92 @@
-
-<div class="background-image"></div>
+<!-- <div class="background-image"></div>
 <div class="overlay"></div>
-
 <div class="header-container">
   <div class="header-texts">
     <p class="titulo-contacto">CONTACTO</p>
     <p class="subtitulo-contacto">Inicio / Contacto</p>
   </div>
-</div>
+</div> -->
+<app-encabezado></app-encabezado>
+<div class="linea"></div>
 <div class="entrega">
   <p class="texto-delgado">Haz tu pedido</p>
-  <h5 class="texto-delgado">El tiempo de entrega de tu pedido es de 2 a 8 días hábiles. Esto depende de la distancia y disponibilidad de rutas. Agradecemos tu confianza.</h5>
+  <h5 class="texto-delgado">
+    El tiempo de entrega de tu pedido es de 2 a 8 días hábiles. Esto depende de la distancia y disponibilidad de rutas. Agradecemos tu confianza.
+  </h5>
 </div>
-<!-- Imagen de fondo -->
-<div class="container fondo-blanco-ajustable">
-  <div class="info-container">
-    <div class="fondo-imagen-con-cards">
-    <img src="assets/textura.webp" class="fondo-img" />
+<div class="fondo-blanco-ajustable">
+  <div class="info-container fondo-imagen-con-cards">
+        <div class="cards">
+      <div class="card">
+        <div class="icon-wrapper">
+          <i class="fa fa-phone icono rotar"></i>
+        </div>
+        <h4>TELÉFONO</h4>
+        <p><a href="tel:5526623930">55 2662 3930</a></p>
+      </div>
 
- 
+      <div class="card">
+        <div class="icon-wrapper">
+          <i class="fa fa-envelope icono"></i>
+        </div>
+        <h4>EMAIL</h4>
+        <p>ventas&#64;incrospito.com</p>
+      </div>
 
- 
-  <div class="cards">
-    <div class="card">
-      <div class="icon-wrapper">
-        <i class="fa fa-phone icono rotar"></i>
+      <div class="card">
+        <div class="icon-wrapper">
+          <i class="fa fa-location-arrow icono"></i>
+        </div>
+        <h4>DIRECCIÓN</h4>
+        <p>
+          Calle Jurisprudencia N° 13<br />
+          Col. Copilco Universidad, CDMX
+        </p>
       </div>
-      <h4>TELÉFONO</h4>
-      <p><a href="tel:5526623930">55 2662 3930</a></p>
     </div>
-    <div class="card">
-      <div class="icon-wrapper">
-        <i class="fa fa-envelope icono"></i>
-      </div>
-      <h4>EMAIL</h4>
-      <p>ventas&#64;incrospito.com</p>
+    <div class="formulario-container">
+      <h3 class="titulo-formulario">Contáctanos</h3>
+      <div *ngIf="cargando" class="loader"></div>
+      <input
+        type="text"
+        id="contacto-name"
+        name="name"
+        placeholder="Nombre"
+        [(ngModel)]="contacto.nombre"
+      />
+
+      <input
+        type="email"
+        id="contacto-correo"
+        name="correo"
+        placeholder="Correo"
+        [(ngModel)]="contacto.correo"
+      />
+
+      <input
+        type="text"
+        id="contacto-asunto"
+        name="asunto"
+        placeholder="Asunto"
+        [(ngModel)]="contacto.asunto"
+      />
+
+      <textarea
+        id="contacto-mensaje"
+        name="mensaje"
+        placeholder="Mensaje"
+        [(ngModel)]="contacto.mensaje"
+      ></textarea>
+
+      <button
+        type="button"
+        class="btn-submit"
+        (click)="enviarFormulario()"
+        [disabled]="cargando"
+      >
+        {{ cargando ? 'Enviando...' : 'Enviar' }}
+      </button>
     </div>
-    <div class="card">
-      <div class="icon-wrapper">
-        <i class="fa fa-location-arrow icono"></i>
-      </div>
-      <h4>DIRECCIÓN</h4>
-      <p>Calle Jurisprudencia N° 13<br>Col. Copilco Universidad, CDMX</p>
-    </div>
+
   </div>
-
-
-  <!-- FORMULARIO DENTRO DEL CONTENEDOR CON IMAGEN -->
-  <div class="formulario-container">
-    <h3 class="titulo-formulario">Contáctanos</h3>
-    <div *ngIf="cargando" class="loader"></div>
-
-    <input type="text" id="contacto-name" name="name" placeholder="Nombre"  [(ngModel)]="contacto.nombre" />
-     <input type="email" id="contacto-correo" name="correo" placeholder="Correo" [(ngModel)]="contacto.correo" /> 
-     <input type="text" id="contacto-asutno" name="asunto" placeholder="Asunto" [(ngModel)]="contacto.asunto" /> 
-     <textarea id="contacto-mensaje" name="mensaje" placeholder="Mensaje" [(ngModel)]="contacto.mensaje"></textarea> 
-     <button type="button" class="btn-submit" (click)="enviarFormulario()" [disabled]="cargando">
-      {{ cargando ? 'Enviando...' : 'Enviar' }}
-    </button>    
-  </div>
-
 </div>
-</div>
-
-
