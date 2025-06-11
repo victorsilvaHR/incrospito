@@ -12,10 +12,13 @@ export class EncabezadoComponent implements OnInit {
   titulo: string = '';
   subtitulo: string = '';
   esInicio: boolean = false; // <- NUEVO
+  esMovil: boolean = false;
+
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
+      this.esMovil = window.innerWidth <= 768;
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {

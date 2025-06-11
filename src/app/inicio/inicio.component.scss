@@ -1,3 +1,46 @@
+.collarin {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.collarin img {
+  width: 100vw;
+  height: 600px; /* puedes ajustar el alto */
+  object-fit: cover;
+  display: block;
+}
+
+.texto-sobre-imagen {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  width: 80%; /* más estrecho para forzar más renglones */
+  max-width: 600px;
+  color: #111;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: left;
+  line-height: 1.6;
+  padding: 30px;
+  border-radius: 12px;
+  // background-color: rgba(255, 255, 255, 0.75); /* para mejorar legibilidad */
+  // box-shadow: 0 8px 24px rgba(255, 255, 255, 0.6); /* sombra más blanca y suave */
+  margin-left: 0; /* elimina margen negativo */
+}
+
+
+.texto-sobre-imagen .columna {
+  width: 50%;
+}
+
+
+
+
+
+
 .top-image {
   width: 100%;
   margin-bottom: 30px;
@@ -606,6 +649,32 @@ h2.centered-text {
     border: none;
     text-decoration: none;
     border-radius: 24px;
+  }
+    .collarin img {
+    max-height: 400px; /* limitar altura máxima para móvil */
+    width: 100%;       /* ancho completo */
+    object-fit: cover;
+        height: 300px;
+
+  }
+
+  .texto-sobre-imagen {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 90%;          /* más ancho para que se adapte */
+    max-width: none;     /* quitar max-width para móvil */
+    font-size: 14px;     /* texto más pequeño para móvil */
+    padding: 20px;       /* padding reducido */
+background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;    /* sombra más simple o quitar */
+    line-height: 1.4;
+    border-radius: 12px;
+  }
+
+  .texto-sobre-imagen .columna {
+    width: 100%;        /* para que las columnas ocupen todo el ancho */
   }
   
 }

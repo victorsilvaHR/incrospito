@@ -1,8 +1,17 @@
- <div class="background-image"></div>
-<div class="overlay"></div>
+<!-- Imagen de fondo -->
+<div
+  *ngIf="!(esInicio && esMovil)"
+  class="background-image">
+</div>
+
+<!-- Overlay -->
+<div
+  *ngIf="!(esInicio && esMovil)"
+  class="overlay">
+</div>
+
+<!-- Contenido del encabezado -->
 <div class="header-container">
-  <div class="header-texts">
-    <p class="titulo-contacto">{{titulo}}</p>
-    <p class="subtitulo-contacto">{{subtitulo}}</p>
-  </div>
-</div> 
+  <h1 class="titulo-contacto">{{ titulo }}</h1>
+  <p class="subtitulo-contacto">{{ subtitulo }}</p>
+</div>
