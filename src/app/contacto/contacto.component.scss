@@ -212,6 +212,10 @@
 .card:active h4 {
   color: #44b9b9;
 }
+.card:hover .icon-wrapper .icono {
+  color: white;
+}
+
 
   
   .social-icons {
@@ -232,12 +236,13 @@
 
   /* FORMULARIO DENTRO DE LA IMAGEN DE FONDO */
   .formulario-container {
-    padding: 2rem;
+    // padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
     width: 50%;
-    z-index: 1;
+    // z-index: 1;
     position: relative;
+    margin-top: -45em;
   }
   .formulario-container {
     position: relative;

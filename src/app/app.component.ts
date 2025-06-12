@@ -11,21 +11,16 @@ export class AppComponent implements OnInit {
   title = 'incrospito';
   mostrarModal: boolean = false;
 
-
   constructor(private router: Router) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
-        window.scrollTo(0, 0); // Esto hace que la vista inicie desde arriba sin scroll animado
+        window.scrollTo(0, 0);
       });
   }
-  ngOnInit(): void {
-    const yaMostrado = localStorage.getItem('modalEdad');
 
-    if (!yaMostrado) {
-      this.mostrarModal = true;
-      localStorage.setItem('modalEdad', 'true');
-    }
+  ngOnInit(): void {
+    this.mostrarModal = true;
   }
 
   confirmarEdad(): void {
@@ -36,4 +31,3 @@ export class AppComponent implements OnInit {
     window.location.href = 'https://www.google.com';
   }
 }
-
