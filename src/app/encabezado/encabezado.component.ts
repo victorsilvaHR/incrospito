@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { botellas } from 'src/app/utils/botellas'; // Ajusta según tu path real
+import { botellas } from 'src/app/utils/botellas';
 
 @Component({
   selector: 'app-encabezado',
@@ -11,14 +11,14 @@ import { botellas } from 'src/app/utils/botellas'; // Ajusta según tu path real
 export class EncabezadoComponent implements OnInit {
   titulo: string = '';
   subtitulo: string = '';
-  esInicio: boolean = false; // <- NUEVO
+  esInicio: boolean = false; 
   esMovil: boolean = false;
-
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
-      this.esMovil = window.innerWidth <= 768;
+    this.detectarVistaMovil();
+
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
@@ -30,8 +30,13 @@ export class EncabezadoComponent implements OnInit {
     this.setTitulo(this.router.url);
   }
 
+  @HostListener('window:resize', [])
+  detectarVistaMovil() {
+    this.esMovil = window.innerWidth <= 768;
+  }
+
   setTitulo(url: string) {
-    this.esInicio = url === '/'; // <- NUEVO
+    this.esInicio = url === '/';
 
     const rutasEstaticas: { [key: string]: string } = {
       '/quienes-somos': 'QUIENES SOMOS',
