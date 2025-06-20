@@ -69,7 +69,6 @@
 .quienes {
   color: #e47979;
   font-size: 40px;
-  font-family: 'Work Sans', sans-serif;
   margin-bottom: 50px;
   font-weight: 600;
 }
@@ -87,7 +86,6 @@
   min-width: 300px;
   color: #a0a0a0;
   letter-spacing: 0em;
-  font-family: Open Sans;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -165,12 +163,12 @@
 /* Estilos de la misión */
 .seccion-mision {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
-  position: relative;
-  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+
 }
 
 .imagen-mision img {
@@ -178,6 +176,7 @@
   height: auto;
   margin-left: -26%;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  
 }
 
 .tarjeta-mision {
@@ -192,12 +191,11 @@
 }
 .seccion-valores {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
-  position: relative;
-  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
 }
 .tarjeta-valores {
   background-color: #ffffff;
