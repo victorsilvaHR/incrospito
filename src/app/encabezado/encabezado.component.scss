@@ -10,7 +10,7 @@
   height: 50%;
   z-index: -2;
   left: 0;
-  top: 8rem;
+  top: 7rem;
   opacity: .74;
 }
 .header-container {
@@ -60,20 +60,23 @@
       font-weight: 100;
       letter-spacing: 2px;
     }
+    .ocultar-fondo {
+  display: none !important;
+}
+
 
 @media (max-width: 768px) {
   .background-image {
-    background-size: cover; /* Mantiene proporción sin recortar tanto */
+    background-size: cover;
     background-position: center;
-    background-attachment: scroll; /* Mejora compatibilidad en móviles */
-    height: 300px; /* Aumenta la altura */
-    padding: 60px 0; /* Más espacio para contenido */
-    
+    background-attachment: scroll;
+    height: 300px;
+    padding: 60px 0;
   }
 
   .header-container {
     padding: 40px 20px;
-    height: 177px; /* Que ocupe el mismo alto que la imagen */
+    height: 177px;
   }
 
   .titulo-contacto {
@@ -86,6 +89,34 @@
   }
 
   .overlay {
-    height: 300px; /* Debe coincidir con la altura del fondo */
+    height: 300px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 780px) {
+  .background-image {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    height: 300px;
+    padding: 60px 0;
+  }
+
+    .header-container {
+    padding: 40px 20px;
+    height: 177px;
+  }
+
+  .titulo-contacto {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .subtitulo-contacto {
+    font-size: 13px;
+  }
+
+  .overlay {
+    height: 300px;
   }
 }

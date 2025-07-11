@@ -39,7 +39,7 @@ export class EncabezadoComponent implements OnInit {
     this.esInicio = url === '/';
 
     const rutasEstaticas: { [key: string]: string } = {
-      '/quienes-somos': 'QUIENES SOMOS',
+      '/quienes-somos': 'QUIÉNES SOMOS',
       '/tienda': 'TIENDA',
       '/contacto': 'CONTACTO',
       '/terminos': 'TÉRMINOS Y CONDICIONES',

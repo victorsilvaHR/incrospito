@@ -242,7 +242,7 @@
     width: 50%;
     // z-index: 1;
     position: relative;
-    margin-top: -45em;
+    margin-top: -4em;
   }
   .formulario-container {
     position: relative;
@@ -353,7 +353,18 @@
   height: 100%;
 }
 
+:host ::ng-deep app-footer {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+}
+
+
 @media screen and (max-width: 768px) {
+    .fondo-imagen-con-cards {
+    background-image: none !important; /* Quita la imagen solo en móvil */
+    background-color: #fff; /* Opcional: define un color de fondo alternativo */
+  }
 
   .background-image {
     background-size: 190%; /* Aumentar el tamaño de la imagen */
@@ -414,7 +425,7 @@
   }
 
   .formulario-container {
-    width: 95%;
+    width: 85%;
     padding: 2rem 1rem;
     margin: 1rem auto; /* Espacio arriba */
   }
